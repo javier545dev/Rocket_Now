@@ -14,7 +14,7 @@ export default function MenuPopper({ open, onClose, children, type }) {
     <>
       {cloneElement(children, { ...children.props, ref: setChildNode })}
       <Popper
-        open={open}
+        open={open || false}
         className={classes.popper}
         anchorEl={childNode}
         placement="bottom"
@@ -31,7 +31,7 @@ export default function MenuPopper({ open, onClose, children, type }) {
         }}
       >
         {({ TransitionProps }) => (
-          <Fade {...TransitionProps} timeout={350}>
+          <Fade {...TransitionProps} timeout={600}>
             <Paper elevation={0} square style={{ height: '100%' }}>
               <ClickAwayListener onClickAway={onClose}>
                 <Paper className={classes.popoverRoot} elevation={0} square>

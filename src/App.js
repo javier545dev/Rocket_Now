@@ -1,5 +1,7 @@
 import { Box } from '@material-ui/core'
-import { Header, Main } from './components'
+import { Route, Switch } from 'react-router-dom'
+import { Landing, Login, Error404 } from './page'
+import { Header } from '@Components'
 import useStyles from './styles'
 
 function App() {
@@ -8,9 +10,11 @@ function App() {
   return (
     <Box className={classes.root}>
       <Header />
-      <Box>
-        <Main />
-      </Box>
+      <Switch>
+        <Route path="/" exact component={Landing} />
+        <Route path="/login" exact component={Login} />
+        <Route path="*" component={Error404} />
+      </Switch>
     </Box>
   )
 }
