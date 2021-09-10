@@ -4,13 +4,14 @@ import Astronaut from '@Assets/images/astronaut.png'
 import Estrellablanca from '@Assets/images/estrellablanca.png'
 import Estrellaroja from '@Assets/images/estrellaroja.png'
 import Rocket from '@Assets/images/rocket.png'
+import { useGlobalData } from '@Hooks'
 
 import useStyles from './styles'
 
 const Main = () => {
   const classes = useStyles()
   const history = useHistory()
-  console.log(history)
+  const { isAuth } = useGlobalData()
 
   return (
     <Box className={classes.root}>
@@ -47,10 +48,14 @@ const Main = () => {
       />
       <img src={Rocket} alt="Rocket" className={classes.rocket} />
 
-      <Button variant="contained" onClick={() => history.push('/login')}>
-        LOG IN
-      </Button>
-      <Button variant="outlined">SIGN UP</Button>
+      {!isAuth && (
+        <>
+          <Button variant="contained" onClick={() => history.push('/login')}>
+            LOG IN
+          </Button>
+          <Button variant="outlined">SIGN UP</Button>
+        </>
+      )}
     </Box>
   )
 }

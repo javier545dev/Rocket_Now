@@ -2,58 +2,41 @@ import { makeStyles } from '@material-ui/core'
 
 export default makeStyles(() => ({
   root: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '0 10px',
     height: 'calc(100vh - 80px)',
+    width: '100%'
+  },
+  card: {
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
-    position: 'relative'
+    padding: 10
   },
-  astronaut: {
-    width: 150,
-    marginBottom: 50,
-    zIndex: 1
+  title: {
+    margin: '10px 0',
+    fontFamily: 'Orbitron !important',
+    fontWeight: 500
   },
-  estrellablanca: {
-    position: 'absolute',
-    width: 10,
-    top: 25,
-    left: '10%'
+  form: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: 'center'
   },
-  estrellablanca1: {
-    position: 'absolute',
-    width: 15,
-    top: '40%',
-    left: '15%'
+  input: {
+    margin: '10px auto',
+    width: '100%'
   },
-  estrellablanca2: {
-    position: 'absolute',
-    width: 20,
-    bottom: 90,
-    left: '5%'
-  },
-  estrellablanca3: {
-    position: 'absolute',
-    width: 20,
-    top: 30,
-    right: '10%'
-  },
-  estrellablanca4: {
-    position: 'absolute',
-    width: 10,
-    top: '60%',
-    right: '10%'
-  },
-  estrellaroja: {
-    position: 'absolute',
-    width: 15,
-    bottom: 90,
-    right: '10%'
-  },
-  rocket: {
-    position: 'absolute',
-    top: '12%',
-    right: '6%'
+  btn: {
+    margin: '10px 0',
+    '& > span': {
+      fontFamily: 'Orbitron !important',
+      letterSpacing: '0.18rem'
+    }
   }
 }))

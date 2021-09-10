@@ -1,20 +1,58 @@
+/* eslint-disable no-unused-vars */
+import { useCallback, useEffect, useState } from 'react'
 import { Box } from '@material-ui/core'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import { Landing, Login, Error404 } from './page'
-import { Header } from '@Components'
+import { Header, Loader } from '@Components'
+import { profile } from '@API/actions'
+import { useGlobalActions, useGlobalData } from '@Hooks'
 import useStyles from './styles'
 
 function App() {
   const classes = useStyles()
+  const { reAuth } = useGlobalActions()
+  const { isAuth } = useGlobalData()
+  const [loader, setLoader] = useState(true)
+
+  const getDataUser = useCallback(async () => {
+    try {
+      const { data } = await profile()
+      reAuth(data)
+    } catch (error) {
+      console.log('aqui error', error)
+    } finally {
+      setLoader(false)
+    }
+  }, [])
+
+  useEffect(() => {
+    getDataUser()
+  }, [])
+
+  useEffect(() => {
+    if (isAuth) {
+      getDataUser()
+    }
+  }, [isAuth])
 
   return (
     <Box className={classes.root}>
-      <Header />
-      <Switch>
-        <Route path="/" exact component={Landing} />
-        <Route path="/login" exact component={Login} />
-        <Route path="*" component={Error404} />
-      </Switch>
+      {loader ? (
+        <Loader />
+      ) : (
+        <>
+          <Header />
+          <Switch>
+            <Route
+              path="/login"
+              exact
+              render={() => (!isAuth ? <Login /> : <Redirect to="/" />)}
+            />
+            <Route path="/" exact component={Landing} />
+            <Route path="*" component={Error404} />
+          </Switch>
+        </>
+      )}
     </Box>
   )
 }
