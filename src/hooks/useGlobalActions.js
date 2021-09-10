@@ -3,9 +3,10 @@ import { useContext } from 'react'
 import GlobalContext from '@Context'
 
 export default function useGlobalActions() {
-  const { reAuth, loginAction } = useContext(GlobalContext)
+  const { reAuth, loginAction, logoutAuth } = useContext(GlobalContext)
   return {
     reAuth,
-    loginAction
+    loginAction,
+    logoutAuth
   }
 }

@@ -11,6 +11,12 @@ export default function globalReducer(state, { type, payload }) {
         ...state,
         isAuth: true
       }
+    case 'SET_LOGOUT':
+      return {
+        ...state,
+        isAuth: false,
+        user: {}
+      }
 
     default:
       return state

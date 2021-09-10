@@ -19,10 +19,16 @@ export const GlobalProvider = ({ children }) => {
     dispatch({ type: 'SET_AUTH', payload: data })
   }
 
+  const logoutAuth = () => {
+    localStorage.clear()
+    dispatch({ type: 'SET_LOGOUT' })
+  }
+
   const data = {
     ...state,
     reAuth,
-    loginAction
+    loginAction,
+    logoutAuth
   }
 
   return (
