@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Box } from '@material-ui/core'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import { Landing, Login, Error404 } from './page'
+import { Landing, Login, Error404, Signup } from './page'
 import { Header, Loader } from '@Components'
 import { profile } from '@API/actions'
 import { useGlobalActions, useGlobalData } from '@Hooks'
@@ -47,6 +47,12 @@ function App() {
               path="/login"
               exact
               render={() => (!isAuth ? <Login /> : <Redirect to="/" />)}
+            />
+
+            <Route
+              path="/signup"
+              exact
+              render={() => (!isAuth ? <Signup /> : <Redirect to="/" />)}
             />
             <Route path="/" exact component={Landing} />
             <Route path="*" component={Error404} />

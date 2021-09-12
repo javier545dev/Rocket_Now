@@ -5,7 +5,7 @@ import { login } from '@API/actions'
 import { useGlobalActions } from '@Hooks'
 import useStyles from './styles'
 
-const Main = () => {
+const Login = () => {
   const classes = useStyles()
   const history = useHistory()
   const globalAction = useGlobalActions()
@@ -86,4 +86,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Login
