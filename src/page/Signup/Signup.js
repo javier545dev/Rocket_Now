@@ -8,15 +8,33 @@ import {
 } from '@material-ui/core'
 import useStyles from './styles'
 import { useState } from 'react'
+import { signUser } from '@API/actions'
 
 export default function Signup() {
-  const classes = useStyles()
-
   const [sign, setSign] = useState({
     name: '',
     email: '',
-    password: ''
+    password: '',
+    project_name: '',
+    why: 'ssssa',
+    what: 'sasaas',
+    how: 'asasas'
   })
+  const classes = useStyles()
+
+  const handleFormSignup = async (e) => {
+    e.preventDefault()
+    try {
+      await signUser(sign)
+    } catch (error) {
+      setSign({
+        name: sign.name,
+        email: sign.email,
+        password: sign.password
+      })
+      alert('no guadado')
+    }
+  }
 
   return (
     <Box className={classes.root}>
@@ -78,6 +96,7 @@ export default function Signup() {
             variant="contained"
             color="primary"
             className={classes.btn}
+            onClick={handleFormSignup}
           >
             Signup
           </Button>

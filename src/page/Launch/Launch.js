@@ -8,16 +8,32 @@ import {
 } from '@material-ui/core'
 import useStyles from './styles'
 import { useState } from 'react'
+import { signUser } from '@API/actions'
 
 export default function Launch() {
-  const classes = useStyles()
-
   const [launch, setLaunch] = useState({
     project_name: '',
     why: '',
     what: '',
     how: ''
   })
+
+  const handleFormLaunch = async (e) => {
+    e.preventDefault()
+    try {
+      await signUser(launch)
+    } catch (error) {
+      setLaunch({
+        project_name: '',
+        why: '',
+        what: '',
+        how: ''
+      })
+      alert('no guadado')
+    }
+  }
+
+  const classes = useStyles()
 
   return (
     <Box className={classes.root}>
@@ -117,6 +133,7 @@ export default function Launch() {
             variant="contained"
             color="primary"
             className={classes.btn}
+            onClick={handleFormLaunch}
           >
             Launch
           </Button>

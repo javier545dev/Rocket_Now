@@ -2,11 +2,12 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Box } from '@material-ui/core'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import { Landing, Login, Error404, Launch } from './page'
+import { Landing, Login, Error404, Signup } from './page'
 import { Header, Loader } from '@Components'
 import { profile } from '@API/actions'
 import { useGlobalActions, useGlobalData } from '@Hooks'
 import useStyles from './styles'
+import Launch from './page/Launch/Launch'
 
 function App() {
   const classes = useStyles()
@@ -52,7 +53,7 @@ function App() {
             <Route
               path="/signup"
               exact
-              render={() => (!isAuth ? <Launch /> : <Redirect to="/" />)}
+              render={() => (!isAuth ? <Signup /> : <Redirect to="/" />)}
             />
             <Route path="/" exact component={Landing} />
             <Route path="*" component={Error404} />
