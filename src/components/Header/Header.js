@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { AppBar, Box, IconButton } from '@material-ui/core'
+import { useHistory } from 'react-router-dom'
 import MenuIcon from '@material-ui/icons/Menu'
 
 import Logo from '@Assets/images/logo@1x.png'
@@ -15,6 +16,7 @@ import useStyles from './styles'
 
 export default function Header() {
   const classes = useStyles()
+  const history = useHistory()
   const [openMenu, setOpenMenu] = useState(false)
   const [openTierra, setOpenTierra] = useState(null)
   const [openProfile, setOpenProfile] = useState(null)
@@ -26,7 +28,7 @@ export default function Header() {
       elevation={0}
       className={classes.header}
     >
-      <Box className={classes.logo}>
+      <Box className={classes.logo} onClick={() => history.push('/')}>
         <img src={Logo} alt="rocket now" srcSet={`${Logo2} 2x`} />
       </Box>
 

@@ -6,4 +6,6 @@ export const login = `${API_BASE_AUTH}login`
 
 export const user = `${API_BASE_AUTH}user`
 
+export const signup = `${API_BASE_AUTH}signup`
+
 export const logout = `${API_BASE_AUTH}logout`

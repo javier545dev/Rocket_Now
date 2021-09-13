@@ -7,9 +7,16 @@ import {
   Card
 } from '@material-ui/core'
 import useStyles from './styles'
+import { useState } from 'react'
 
 export default function Signup() {
   const classes = useStyles()
+
+  const [sign, setSign] = useState({
+    name: '',
+    email: '',
+    password: ''
+  })
 
   return (
     <Box className={classes.root}>
@@ -25,8 +32,12 @@ export default function Signup() {
             color="primary"
             required
             fullWidth
-            id="firstName"
+            id="name"
             label="Su Nombre"
+            value={sign.name}
+            onChange={(e) =>
+              setSign((prev) => ({ ...prev, name: e.target.value }))
+            }
             autoComplete="off"
             autoFocus
           />
@@ -36,18 +47,11 @@ export default function Signup() {
             color="primary"
             required
             fullWidth
-            id="lastName"
-            label="Su Apellido"
-            name="lastName"
-            autoComplete="off"
-          />
-          <TextField
-            className={classes.input}
-            variant="outlined"
-            color="primary"
-            required
-            fullWidth
             id="email"
+            value={sign.email}
+            onChange={(e) =>
+              setSign((prev) => ({ ...prev, email: e.target.value }))
+            }
             label="Ingrese se Email"
             name="email"
             autoComplete="off"
@@ -62,6 +66,10 @@ export default function Signup() {
             label="Password"
             type="password"
             id="password"
+            value={sign.password}
+            onChange={(e) =>
+              setSign((prev) => ({ ...prev, password: e.target.value }))
+            }
             autoComplete="current-password"
           />
           <Button
@@ -71,7 +79,7 @@ export default function Signup() {
             color="primary"
             className={classes.btn}
           >
-            Sign Up
+            Signup
           </Button>
           <Typography variant="h5" className={classes.title}>
             <Link href="#" variant="body2" color="inherit">
