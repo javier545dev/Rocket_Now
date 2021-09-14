@@ -9,8 +9,11 @@ import {
 import useStyles from './styles'
 import { useEffect, useState } from 'react'
 import { signUser } from '@API/actions'
+import { useHistory } from 'react-router'
 
 export default function Launch({ sign }) {
+  const history = useHistory()
+
   const [launch, setLaunch] = useState({
     project_name: '',
     why: '',
@@ -32,6 +35,7 @@ export default function Launch({ sign }) {
     e.preventDefault()
     try {
       await signUser(launch)
+      history.push('/')
     } catch (error) {
       setLaunch({
         project_name: '',
