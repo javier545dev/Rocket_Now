@@ -3,7 +3,8 @@ import { makeStyles } from '@material-ui/core'
 export default makeStyles(() => ({
   menuItem: {
     display: 'grid',
-    padding: '10px 0',
+    padding: '0',
+    height: '0.1rem',
     alignItems: 'center',
     justifyContent: 'center',
     gridTemplateColumns: '1fr 1fr',
@@ -15,7 +16,7 @@ export default makeStyles(() => ({
   },
   title: {
     textTransform: 'uppercase',
-    fontSize: 18,
+    fontSize: 13,
     fontWeight: '500'
   },
   footer: {
@@ -27,13 +28,14 @@ export default makeStyles(() => ({
   footerText: {
     display: 'flex',
     justifyContent: 'center',
-    fontSize: '14px',
-    color: '#616161',
-    padding: '10px 0'
+    fontSize: '12px',
+    color: '#FFFF',
+    padding: '2px 0'
   },
   footerSocialNetwork: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-evenly',
+    BackgroundColor: 'white'
   }
 }))

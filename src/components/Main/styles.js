@@ -10,8 +10,14 @@ export default makeStyles(() => ({
     justifyContent: 'center',
     position: 'relative'
   },
+  buttons: {
+    height: '2.5rem',
+    width: '10rem',
+    marginBottom: '1rem',
+    boxShadow: '0px 5px 5px 1px rgba(220,0,253,0.3)'
+  },
   astronaut: {
-    width: 150,
+    width: 120,
     marginBottom: 50,
     zIndex: 1
   },
@@ -54,6 +60,7 @@ export default makeStyles(() => ({
   rocket: {
     position: 'absolute',
     top: '12%',
-    right: '6%'
+    right: '16%',
+    width: '80px'
   }
 }))

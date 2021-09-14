@@ -7,10 +7,10 @@ import {
   Card
 } from '@material-ui/core'
 import useStyles from './styles'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { signUser } from '@API/actions'
 
-export default function Launch() {
+export default function Launch({ sign }) {
   const [launch, setLaunch] = useState({
     project_name: '',
     why: '',
@@ -18,7 +18,17 @@ export default function Launch() {
     how: ''
   })
 
+  useEffect(() => {
+    setLaunch((prev) => ({
+      name: sign.name,
+      email: sign.email,
+      password: sign.password,
+      ...prev
+    }))
+  }, [sign])
+
   const handleFormLaunch = async (e) => {
+    console.log(launch)
     e.preventDefault()
     try {
       await signUser(launch)
@@ -29,7 +39,7 @@ export default function Launch() {
         what: '',
         how: ''
       })
-      alert('no guadado')
+      alert('no guardado')
     }
   }
 

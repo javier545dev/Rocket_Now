@@ -38,28 +38,30 @@ function App() {
 
   return (
     <Box className={classes.root}>
-      {loader ? (
-        <Loader />
-      ) : (
-        <>
-          <Header />
-          <Switch>
-            <Route
-              path="/login"
-              exact
-              render={() => (!isAuth ? <Login /> : <Redirect to="/" />)}
-            />
+      <Box className={classes.img}>
+        {loader ? (
+          <Loader />
+        ) : (
+          <>
+            <Header />
+            <Switch>
+              <Route
+                path="/login"
+                exact
+                render={() => (!isAuth ? <Login /> : <Redirect to="/" />)}
+              />
 
-            <Route
-              path="/signup"
-              exact
-              render={() => (!isAuth ? <Signup /> : <Redirect to="/" />)}
-            />
-            <Route path="/" exact component={Landing} />
-            <Route path="*" component={Error404} />
-          </Switch>
-        </>
-      )}
+              <Route
+                path="/signup"
+                exact
+                render={() => (!isAuth ? <Signup /> : <Redirect to="/" />)}
+              />
+              <Route path="/" exact component={Landing} />
+              <Route path="*" component={Error404} />
+            </Switch>
+          </>
+        )}
+      </Box>
     </Box>
   )
 }

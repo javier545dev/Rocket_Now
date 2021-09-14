@@ -56,15 +56,27 @@ const Main = () => {
 
       {!isAuth ? (
         <>
-          <Button variant="contained" onClick={() => history.push('/login')}>
+          <Button
+            variant="contained"
+            className={classes.buttons}
+            onClick={() => history.push('/login')}
+          >
             LOGIN
           </Button>
-          <Button variant="outlined" onClick={() => history.push('/signup')}>
+          <Button
+            variant="outlined"
+            className={classes.buttons}
+            onClick={() => history.push('/signup')}
+          >
             SIGNUP
           </Button>
         </>
       ) : (
-        <Button variant="contained" onClick={handleOut}>
+        <Button
+          variant="contained"
+          className={classes.buttons}
+          onClick={handleOut}
+        >
           Logout
         </Button>
       )}

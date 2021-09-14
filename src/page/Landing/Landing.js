@@ -8,10 +8,10 @@ function Landing() {
         <Main />
       </Box>
       <Box>
-        <Earth />
+        <Moon />
       </Box>
       <Box>
-        <Moon />
+        <Earth />
       </Box>
     </Box>
   )
