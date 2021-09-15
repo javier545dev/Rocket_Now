@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.35c3a0af.chunk.css",
+    "main.js": "/static/js/main.e881b216.chunk.js",
+    "main.js.map": "/static/js/main.e881b216.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.04c5b443.js",
+    "runtime-main.js.map": "/static/js/runtime-main.04c5b443.js.map",
+    "static/js/2.b459e35f.chunk.js": "/static/js/2.b459e35f.chunk.js",
+    "static/js/2.b459e35f.chunk.js.map": "/static/js/2.b459e35f.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.35c3a0af.chunk.css.map": "/static/css/main.35c3a0af.chunk.css.map",
+    "static/js/2.b459e35f.chunk.js.LICENSE.txt": "/static/js/2.b459e35f.chunk.js.LICENSE.txt",
+    "static/media/astronaut.80c9918d.png": "/static/media/astronaut.80c9918d.png",
+    "static/media/orbit@2x.1aaee301.png": "/static/media/orbit@2x.1aaee301.png",
+    "static/media/rocket.21a73030.png": "/static/media/rocket.21a73030.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.04c5b443.js",
+    "static/js/2.b459e35f.chunk.js",
+    "static/css/main.35c3a0af.chunk.css",
+    "static/js/main.e881b216.chunk.js"
+  ]
+}
