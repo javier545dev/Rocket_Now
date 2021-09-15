@@ -22,7 +22,7 @@ const Main = () => {
   return (
     <Box className={classes.root}>
       <Typography variant="h5" className={classes.title} color="primary">
-        LUNA
+        Luna
       </Typography>
       <Box className={classes.planeta} style={styles.paperContainer}></Box>
       <img
@@ -62,8 +62,12 @@ const Main = () => {
       />
       <img src={Rocket} alt="Rocket" className={classes.rocket} />
 
-      <Button variant="contained" className={classes.buttons}>
-        UPGRADE
+      <Button
+        variant="contained"
+        className={classes.buttons}
+        style={{ color: 'purple' }}
+      >
+        Empieza Aqui
       </Button>
     </Box>
   )

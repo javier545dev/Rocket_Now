@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core'
 
 export default makeStyles(() => ({
   root: {
-    height: '100vh',
+    height: '60vh',
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
@@ -15,7 +15,7 @@ export default makeStyles(() => ({
     margin: '10px 0',
     fontFamily: 'Orbitron !important',
     fontWeight: 500,
-    paddingBottom: '5rem',
+    paddingBottom: '0.5rem',
     marginBottom: '5rem'
   },
   buttons: {
@@ -68,7 +68,7 @@ export default makeStyles(() => ({
   rocket: {
     position: 'absolute',
     width: '80px',
-    top: '30%',
+    top: '20%',
     right: '37%',
     transform: 'rotate(340deg)'
   },

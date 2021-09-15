@@ -13,6 +13,24 @@ function Landing() {
       <Box>
         <Earth />
       </Box>
+      <Box>
+        <Earth />
+      </Box>
+      <Box>
+        <Earth />
+      </Box>
+      <Box>
+        <Earth />
+      </Box>
+      <Box>
+        <Earth />
+      </Box>
+      <Box>
+        <Earth />
+      </Box>
+      <Box>
+        <Earth />
+      </Box>
     </Box>
   )
 }

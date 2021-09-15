@@ -4,6 +4,7 @@ import Astronaut from '@Assets/images/astronaut.png'
 import Estrellablanca from '@Assets/images/estrellablanca.png'
 import Estrellaroja from '@Assets/images/estrellaroja.png'
 import Rocket from '@Assets/images/rocket.png'
+import CurveBlue from '@Assets/images/curveblue.png'
 import { useGlobalData, useGlobalActions } from '@Hooks'
 
 import useStyles from './styles'
@@ -22,6 +23,8 @@ const Main = () => {
   return (
     <Box className={classes.root}>
       <img src={Astronaut} alt="Astronaut" className={classes.astronaut} />
+      <img src={CurveBlue} alt="Curve Picture" className={classes.curveblue} />
+
       <img
         src={Estrellablanca}
         alt="Estrellablanca"
@@ -57,18 +60,20 @@ const Main = () => {
       {!isAuth ? (
         <>
           <Button
+            style={{ color: 'purple' }}
             variant="contained"
             className={classes.buttons}
             onClick={() => history.push('/login')}
           >
-            LOGIN
+            LOG IN
           </Button>
           <Button
+            color="primary"
             variant="outlined"
             className={classes.buttons}
             onClick={() => history.push('/signup')}
           >
-            SIGNUP
+            SIGN UP
           </Button>
         </>
       ) : (
@@ -77,7 +82,7 @@ const Main = () => {
           className={classes.buttons}
           onClick={handleOut}
         >
-          Logout
+          Log Out
         </Button>
       )}
     </Box>

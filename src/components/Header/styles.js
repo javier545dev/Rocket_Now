@@ -20,12 +20,12 @@ export default makeStyles(({ breakpoints }) => ({
     display: 'flex',
     alignItems: 'center',
     '& > img': {
-      width: 250,
+      width: 220,
       [breakpoints.down('xs')]: {
-        width: 200
+        width: 180
       },
       [breakpoints.down(350)]: {
-        width: 150
+        width: 130
       }
     }
   },
@@ -38,9 +38,9 @@ export default makeStyles(({ breakpoints }) => ({
         padding: 6
       },
       '& > span > img': {
-        width: 25,
+        width: 22,
         [breakpoints.down('md')]: {
-          width: 30
+          width: 28
         }
       }
     }

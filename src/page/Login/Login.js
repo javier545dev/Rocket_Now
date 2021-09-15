@@ -1,4 +1,4 @@
-import { Card, Box, Typography, TextField, Button } from '@material-ui/core'
+import { Box, Typography, TextField, Button, Link } from '@material-ui/core'
 import { useState } from 'react'
 import { useHistory } from 'react-router'
 import { login } from '@API/actions'
@@ -40,48 +40,56 @@ const Login = () => {
 
   return (
     <Box className={classes.root}>
-      <Card className={classes.card}>
-        <Typography variant="h4" className={classes.title}>
+      <Typography variant="h4" className={classes.title} color="primary">
+        LOG IN
+      </Typography>
+      <form size="small" className={classes.form} method="post">
+        <TextField
+          style={{
+            color: '#000',
+            borderRadius: '40px',
+            fontWeight: '600'
+          }}
+          id="email"
+          label="Correo Electronico"
+          variant="outlined"
+          color="primary"
+          type="email"
+          autoComplete="off"
+          className={classes.input}
+          value={data.email}
+          onChange={(e) =>
+            setData((prev) => ({ ...prev, email: e.target.value }))
+          }
+        />
+        <TextField
+          id="password"
+          label="Contraseña"
+          variant="outlined"
+          color="primary"
+          type="password"
+          autoComplete="off"
+          className={classes.input}
+          value={data.password}
+          onChange={(e) =>
+            setData((prev) => ({ ...prev, password: e.target.value }))
+          }
+        />
+        <Button
+          type="submit"
+          variant="contained"
+          fullWidth
+          className={classes.btn}
+          onClick={handleSubmit}
+        >
           Inicia Sesión
+        </Button>
+        <Typography variant="h8" className={classes.subtitle} color="primary">
+          <Link href="#" variant="body2" color="inherit">
+            Aun no eres miembro? Haz clic aqui para registrarte
+          </Link>
         </Typography>
-        <form size="small" className={classes.form} method="post">
-          <TextField
-            id="email"
-            label="Correo Electronico"
-            variant="outlined"
-            color="primary"
-            type="email"
-            autoComplete="off"
-            className={classes.input}
-            value={data.email}
-            onChange={(e) =>
-              setData((prev) => ({ ...prev, email: e.target.value }))
-            }
-          />
-          <TextField
-            id="password"
-            label="Contraseña"
-            variant="outlined"
-            color="primary"
-            type="password"
-            autoComplete="off"
-            className={classes.input}
-            value={data.password}
-            onChange={(e) =>
-              setData((prev) => ({ ...prev, password: e.target.value }))
-            }
-          />
-          <Button
-            type="submit"
-            variant="contained"
-            fullWidth
-            className={classes.btn}
-            onClick={handleSubmit}
-          >
-            Inicia Sesión
-          </Button>
-        </form>
-      </Card>
+      </form>
     </Box>
   )
 }

@@ -42,20 +42,20 @@ export default function Header() {
             <img
               src={MenuTierra}
               srcSet={`${MenuTierra2} 2x`}
-              alt="menu tierra"
+              alt="Menu Tierra"
             />
           </IconButton>
         </MenuPopper>
         <MenuPopper
           open={openProfile}
           onClose={() => setOpenProfile(false)}
-          type="profile"
+          type="Profile"
         >
           <IconButton onClick={() => setOpenProfile((prev) => !prev)}>
             <img
               src={MenuProfile}
               srcSet={`${MenuProfile2} 2x`}
-              alt="menu profile"
+              alt="Menu Profile"
             />
           </IconButton>
         </MenuPopper>
