@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useCallback, useEffect, useState } from 'react'
 import { Box } from '@material-ui/core'
 import { Route, Switch, Redirect } from 'react-router-dom'
@@ -7,7 +6,6 @@ import { Header, Loader } from '@Components'
 import { profile } from '@API/actions'
 import { useGlobalActions, useGlobalData } from '@Hooks'
 import useStyles from './styles'
-import Launch from './page/Launch/Launch'
 
 function App() {
   const classes = useStyles()
@@ -37,8 +35,8 @@ function App() {
   }, [isAuth])
 
   return (
-    <Box className={classes.root}>
-      <Box className={classes.img}>
+    <Box>
+      <Box className={classes.root}>
         {loader ? (
           <Loader />
         ) : (

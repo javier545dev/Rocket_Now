@@ -23,14 +23,15 @@ export default makeStyles(() => ({
   },
   curveblue: {
     position: 'absolute',
-    width: 320,
-    top: 25,
-    left: '0%'
+    width: '100%',
+    top: '5%',
+    left: '0%',
+    objectFit: 'cover'
   },
   estrellablanca: {
     position: 'absolute',
     width: 5,
-    top: 25,
+    top: '5%',
     left: '10%'
   },
   estrellablanca1: {
@@ -42,14 +43,14 @@ export default makeStyles(() => ({
   estrellablanca2: {
     position: 'absolute',
     width: 15,
-    bottom: 90,
+    bottom: '13%',
     left: '5%'
   },
   estrellablanca3: {
     position: 'absolute',
     width: 10,
-    top: 15,
-    right: '11%'
+    top: '0%',
+    right: '10%'
   },
   estrellablanca4: {
     position: 'absolute',
@@ -60,8 +61,14 @@ export default makeStyles(() => ({
   estrellaroja: {
     position: 'absolute',
     width: 10,
-    bottom: 90,
+    bottom: '10%',
     right: '10%'
+  },
+  glowblue: {
+    position: 'absolute',
+    width: 45,
+    bottom: '70%',
+    right: '75%'
   },
   rocket: {
     position: 'absolute',

@@ -4,11 +4,15 @@ import {
   Link,
   Typography,
   Box,
-  Card
+  Icon
 } from '@material-ui/core'
 import useStyles from './styles'
 import { useState } from 'react'
+import { Facebook } from '@material-ui/icons/'
 import Launch from './../Launch/Launch'
+import Orbit2 from '@Assets/images/orbit@2x.png'
+import Estrellablanca from '@Assets/images/estrellablanca.png'
+import Estrellaroja from '@Assets/images/estrellaroja.png'
 
 export default function Signup() {
   const [view, setView] = useState(null)
@@ -30,75 +34,148 @@ export default function Signup() {
   } else {
     return (
       <Box className={classes.root}>
-        <Card className={classes.card}>
-          <Typography variant="h4" className={classes.title}>
-            Registro
+        <img src={Orbit2} alt="orbit" className={classes.orbit} />
+        <img src={Orbit2} alt="orbit" className={classes.orbit2} />
+
+        <img
+          src={Estrellablanca}
+          alt="Estrellablanca"
+          className={classes.estrellablanca}
+        />
+        <img
+          src={Estrellablanca}
+          alt="Estrellablanca"
+          className={classes.estrellablanca1}
+        />
+        <img
+          src={Estrellablanca}
+          alt="Estrellablanca"
+          className={classes.estrellablanca2}
+        />
+        <img
+          src={Estrellablanca}
+          alt="Estrellablanca"
+          className={classes.estrellablanca3}
+        />
+        <img
+          src={Estrellaroja}
+          alt="Estrellaroja"
+          className={classes.estrellaroja}
+        />
+        <Typography variant="h5" className={classes.title} color="primary">
+          CREAR CUENTA
+        </Typography>
+        <form size="small" className={classes.form} method="post">
+          <TextField
+            className={classes.input}
+            name="firstName"
+            variant="outlined"
+            color="primary"
+            required
+            fullWidth
+            id="name"
+            label="Nombre"
+            value={sign.name}
+            InputProps={{
+              classes: {
+                notchedOutline: classes.notchedOutline
+              }
+            }}
+            onChange={(e) =>
+              setSign((prev) => ({ ...prev, name: e.target.value }))
+            }
+            autoComplete="off"
+            autoFocus
+          />
+          <TextField
+            className={classes.input}
+            variant="outlined"
+            color="primary"
+            required
+            fullWidth
+            id="email"
+            value={sign.email}
+            InputProps={{
+              classes: {
+                notchedOutline: classes.notchedOutline
+              }
+            }}
+            onChange={(e) =>
+              setSign((prev) => ({ ...prev, email: e.target.value }))
+            }
+            label="Email"
+            name="email"
+            autoComplete="off"
+          />
+          <TextField
+            className={classes.input}
+            variant="outlined"
+            color="primary"
+            required
+            fullWidth
+            name="password"
+            label="Contraseña"
+            type="password"
+            id="password"
+            value={sign.password}
+            InputProps={{
+              classes: {
+                notchedOutline: classes.notchedOutline
+              }
+            }}
+            onChange={(e) =>
+              setSign((prev) => ({ ...prev, password: e.target.value }))
+            }
+            autoComplete="current-password"
+          />
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.btn}
+            onClick={handleFormSignup}
+          >
+            REGISTRO
+          </Button>
+          <Typography
+            variant="body2"
+            className={classes.subtitle}
+            color="primary"
+          >
+            Al continuar aceptas los Terminos y Condiciones del Aviso de
+            Privacidad
           </Typography>
-          <form size="small" className={classes.form} method="post">
-            <TextField
-              className={classes.input}
-              name="firstName"
-              variant="outlined"
-              color="primary"
-              required
-              fullWidth
-              id="name"
-              label="Su Nombre"
-              value={sign.name}
-              onChange={(e) =>
-                setSign((prev) => ({ ...prev, name: e.target.value }))
-              }
-              autoComplete="off"
-              autoFocus
-            />
-            <TextField
-              className={classes.input}
-              variant="outlined"
-              color="primary"
-              required
-              fullWidth
-              id="email"
-              value={sign.email}
-              onChange={(e) =>
-                setSign((prev) => ({ ...prev, email: e.target.value }))
-              }
-              label="Ingrese se Email"
-              name="email"
-              autoComplete="off"
-            />
-            <TextField
-              className={classes.input}
-              variant="outlined"
-              color="primary"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              value={sign.password}
-              onChange={(e) =>
-                setSign((prev) => ({ ...prev, password: e.target.value }))
-              }
-              autoComplete="current-password"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.btn}
-              onClick={handleFormSignup}
-            >
-              Signup
-            </Button>
-            <Typography variant="h5" className={classes.title}>
-              <Link href="#" variant="body2" color="inherit">
-                Ya tienes una cuenta? Login
-              </Link>
-            </Typography>
-          </form>
-        </Card>
+          <Button
+            type="submit"
+            fullWidth
+            variant="outlined"
+            color="primary"
+            className={classes.btn2}
+          >
+            <Icon className={classes.icon} fontSize="small">
+              <Facebook
+                style={{
+                  width: 25,
+                  height: 24,
+                  color: 'white',
+                  marginRight: '15px'
+                }}
+              />
+            </Icon>
+            <Typography>LOGIN WITH FACEBOOK</Typography>
+          </Button>
+          <Typography
+            variant="body2"
+            className={classes.subtitle}
+            color="primary"
+          >
+            Tienes una cuenta?{' '}
+            <Link href="#" variant="body2" color="inherit" underline="always">
+              Ingresa aqui
+            </Link>
+          </Typography>
+        </form>
       </Box>
     )
   }

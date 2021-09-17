@@ -4,6 +4,9 @@ import { useHistory } from 'react-router'
 import { login } from '@API/actions'
 import { useGlobalActions } from '@Hooks'
 import useStyles from './styles'
+import Orbit2 from '@Assets/images/orbit@2x.png'
+import Estrellablanca from '@Assets/images/estrellablanca.png'
+import Estrellaroja from '@Assets/images/estrellaroja.png'
 
 const Login = () => {
   const classes = useStyles()
@@ -40,16 +43,39 @@ const Login = () => {
 
   return (
     <Box className={classes.root}>
-      <Typography variant="h4" className={classes.title} color="primary">
+      <img src={Orbit2} alt="orbit" className={classes.orbit} />
+      <img src={Orbit2} alt="orbit" className={classes.orbit2} />
+
+      <img
+        src={Estrellablanca}
+        alt="Estrellablanca"
+        className={classes.estrellablanca}
+      />
+      <img
+        src={Estrellablanca}
+        alt="Estrellablanca"
+        className={classes.estrellablanca1}
+      />
+      <img
+        src={Estrellablanca}
+        alt="Estrellablanca"
+        className={classes.estrellablanca2}
+      />
+      <img
+        src={Estrellablanca}
+        alt="Estrellablanca"
+        className={classes.estrellablanca3}
+      />
+      <img
+        src={Estrellaroja}
+        alt="Estrellaroja"
+        className={classes.estrellaroja}
+      />
+      <Typography variant="h5" className={classes.title} color="primary">
         LOG IN
       </Typography>
       <form size="small" className={classes.form} method="post">
         <TextField
-          style={{
-            color: '#000',
-            borderRadius: '40px',
-            fontWeight: '600'
-          }}
           id="email"
           label="Correo Electronico"
           variant="outlined"
@@ -58,6 +84,11 @@ const Login = () => {
           autoComplete="off"
           className={classes.input}
           value={data.email}
+          InputProps={{
+            classes: {
+              notchedOutline: classes.notchedOutline
+            }
+          }}
           onChange={(e) =>
             setData((prev) => ({ ...prev, email: e.target.value }))
           }
@@ -71,6 +102,11 @@ const Login = () => {
           autoComplete="off"
           className={classes.input}
           value={data.password}
+          InputProps={{
+            classes: {
+              notchedOutline: classes.notchedOutline
+            }
+          }}
           onChange={(e) =>
             setData((prev) => ({ ...prev, password: e.target.value }))
           }
@@ -84,9 +120,14 @@ const Login = () => {
         >
           Inicia Sesión
         </Button>
-        <Typography variant="h8" className={classes.subtitle} color="primary">
-          <Link href="#" variant="body2" color="inherit">
-            Aun no eres miembro? Haz clic aqui para registrarte
+        <Typography
+          variant="body2"
+          className={classes.subtitle}
+          color="primary"
+        >
+          Aun no eres miembro?{' '}
+          <Link href="#" variant="body2" color="inherit" underline="always">
+            Haz clic aqui para registrarte
           </Link>
         </Typography>
       </form>
