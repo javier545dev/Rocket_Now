@@ -12,5 +12,11 @@ export default makeStyles(({ breakpoints }) => ({
     [breakpoints.down('xs')]: {
       backgroundSize: '45%, 100%'
     }
+  },
+
+  anotherRoot: {
+    width: '100%',
+    height: 'auto',
+    background: '#fff'
   }
 }))

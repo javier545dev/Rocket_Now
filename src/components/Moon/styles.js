@@ -8,7 +8,8 @@ export default makeStyles(() => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    position: 'relative'
+    position: 'relative',
+    scrollBehavior: 'smooth'
   },
   title: {
     textAlign: 'center',

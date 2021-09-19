@@ -1,60 +1,121 @@
+/* eslint-disable no-unused-vars */
 import { MenuItem, Box, IconButton, Typography } from '@material-ui/core'
 import { Facebook, Instagram, Twitter } from '@material-ui/icons/'
 import Orbit2 from '@Assets/images/orbit@2x.png'
+import { useGlobalData } from '@Hooks'
+import { useHistory } from 'react-router-dom'
 import useStyles from './styles'
 
-const Menu = () => {
+const Menu = ({ onClose }) => {
   const classes = useStyles()
+  const { isLanding } = useGlobalData()
+  const history = useHistory()
+
+  const handleClick = (name) => () => {
+    if (!isLanding) {
+      history.push(`/#${name}`)
+    }
+    onClose()
+  }
+
+  const propsItem = (name) => {
+    const object = {
+      onClick: handleClick(name)
+    }
+    if (isLanding) {
+      object.href = `#${name}`
+      object.component = 'a'
+    }
+    return object
+  }
 
   return (
-    <Box>
+    <Box height="100%">
       <img src={Orbit2} alt="Orbit" className={classes.orbit} />
       <img src={Orbit2} alt="Orbit" className={classes.orbit2} />
-      <Box
-        style={{
-          width: '100%',
-          height: 20,
-          color: 'white',
-          paddingTop: '3vh'
-        }}
-      >
-        <MenuItem className={classes.menuItem}>
+      <Box className={classes.boxItem}>
+        <MenuItem className={classes.menuItem} {...propsItem('moon')}>
           <Box className={classes.logo}>logo</Box>
           <Typography className={classes.title}>LUNA</Typography>
         </MenuItem>
-        <MenuItem className={classes.menuItem}>
+        <MenuItem
+          className={classes.menuItem}
+          component="a"
+          href="#"
+          onClick={onClose}
+        >
           <Box className={classes.logo}>logo</Box>
           <Typography className={classes.title}>TIERRA</Typography>
         </MenuItem>
-        <MenuItem className={classes.menuItem}>
+        <MenuItem
+          className={classes.menuItem}
+          component="a"
+          href="#"
+          onClick={onClose}
+        >
           <Box className={classes.logo}>logo</Box>
           <Typography className={classes.title}>MERCURIO</Typography>
         </MenuItem>
-        <MenuItem className={classes.menuItem}>
+        <MenuItem
+          className={classes.menuItem}
+          component="a"
+          href="#"
+          onClick={onClose}
+        >
           <Box className={classes.logo}>logo</Box>
           <Typography className={classes.title}>VENUS</Typography>
         </MenuItem>
-        <MenuItem className={classes.menuItem}>
+        <MenuItem
+          className={classes.menuItem}
+          component="a"
+          href="#"
+          onClick={onClose}
+        >
           <Box className={classes.logo}>logo</Box>
           <Typography className={classes.title}>MARTE</Typography>
         </MenuItem>
-        <MenuItem className={classes.menuItem}>
+        <MenuItem
+          className={classes.menuItem}
+          component="a"
+          href="#"
+          onClick={onClose}
+        >
           <Box className={classes.logo}>logo</Box>
           <Typography className={classes.title}>JUPITER</Typography>
         </MenuItem>
-        <MenuItem className={classes.menuItem}>
+        <MenuItem
+          className={classes.menuItem}
+          component="a"
+          href="#"
+          onClick={onClose}
+        >
           <Box className={classes.logo}>logo</Box>
           <Typography className={classes.title}>SATURNO</Typography>
         </MenuItem>
-        <MenuItem className={classes.menuItem}>
+        <MenuItem
+          className={classes.menuItem}
+          component="a"
+          href="#"
+          onClick={onClose}
+        >
           <Box className={classes.logo}>logo</Box>
           <Typography className={classes.title}>URANO</Typography>
         </MenuItem>
-        <MenuItem className={classes.menuItem}>
+        <MenuItem
+          className={classes.menuItem}
+          component="a"
+          href="#"
+          onClick={onClose}
+        >
           <Box className={classes.logo}>logo</Box>
           <Typography className={classes.title}>NEPTUNO</Typography>
         </MenuItem>
-        <MenuItem className={classes.menuItem}>
+        <MenuItem
+          className={classes.menuItem}
+          component="a"
+          href="#"
+          onClick={onClose}
+        >
           <Box className={classes.logo}>logo</Box>
           <Typography className={classes.title}>PLUTON</Typography>
         </MenuItem>

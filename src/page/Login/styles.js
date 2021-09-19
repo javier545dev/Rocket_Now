@@ -5,7 +5,7 @@ export default makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'flexStart',
+    justifyContent: 'center',
     backgroundColor: '#454857',
     padding: '0 30px',
     height: 'calc(100vh - 80px)',
@@ -71,8 +71,8 @@ export default makeStyles(() => ({
   orbit: {
     position: 'absolute',
     width: '35%',
-    top: '13.6%',
-    left: '65%',
+    top: 81,
+    right: 0,
     objectFit: 'cover'
   },
   orbit2: {
@@ -101,6 +101,7 @@ export default makeStyles(() => ({
     fontFamily: 'Montserrat !important',
     fontWeight: 500,
     paddingBottom: '16px',
-    paddingTop: '50px'
+    paddingTop: 0,
+    marginTop: '0 !important'
   }
 }))

@@ -6,11 +6,12 @@ import { Header, Loader } from '@Components'
 import { profile } from '@API/actions'
 import { useGlobalActions, useGlobalData } from '@Hooks'
 import useStyles from './styles'
+import clsx from 'clsx'
 
 function App() {
   const classes = useStyles()
   const { reAuth } = useGlobalActions()
-  const { isAuth } = useGlobalData()
+  const { isAuth, isLanding } = useGlobalData()
   const [loader, setLoader] = useState(true)
 
   const getDataUser = useCallback(async () => {
@@ -35,31 +36,34 @@ function App() {
   }, [isAuth])
 
   return (
-    <Box>
-      <Box className={classes.root}>
-        {loader ? (
-          <Loader />
-        ) : (
-          <>
-            <Header />
-            <Switch>
-              <Route
-                path="/login"
-                exact
-                render={() => (!isAuth ? <Login /> : <Redirect to="/" />)}
-              />
+    <Box
+      className={clsx({
+        [classes.root]: isLanding,
+        [classes.anotherRoot]: !isLanding
+      })}
+    >
+      {loader ? (
+        <Loader />
+      ) : (
+        <>
+          <Header />
+          <Switch>
+            <Route
+              path="/login"
+              exact
+              render={() => (!isAuth ? <Login /> : <Redirect to="/" />)}
+            />
 
-              <Route
-                path="/signup"
-                exact
-                render={() => (!isAuth ? <Signup /> : <Redirect to="/" />)}
-              />
-              <Route path="/" exact component={Landing} />
-              <Route path="*" component={Error404} />
-            </Switch>
-          </>
-        )}
-      </Box>
+            <Route
+              path="/signup"
+              exact
+              render={() => (!isAuth ? <Signup /> : <Redirect to="/" />)}
+            />
+            <Route path="/" exact component={Landing} />
+            <Route path="*" component={Error404} />
+          </Switch>
+        </>
+      )}
     </Box>
   )
 }

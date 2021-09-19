@@ -1,25 +1,48 @@
-import { useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import { AppBar, Box, IconButton } from '@material-ui/core'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 import MenuIcon from '@material-ui/icons/Menu'
 
+import { useGlobalData } from '@Hooks'
 import Logo from '@Assets/images/logo@1x.png'
 import Logo2 from '@Assets/images/logo@2x.png'
+import Nowlogo from '@Assets/images/rocketnowlogo@1x.png'
+import Nowlogo2 from '@Assets/images/rocketnowlogo@2x.png'
 import MenuProfile from '@Assets/images/menuprofile@1x.png'
 import MenuProfile2 from '@Assets/images/menuprofile@2x.png'
 import MenuTierra from '@Assets/images/menutierra@1x.png'
 import MenuTierra2 from '@Assets/images/menutierra@2x.png'
+import MenuProfileDark from '@Assets/images/menuprofiledark.png'
+import MenuTierraDark from '@Assets/images/menutierradark.png'
 
 import MenuPopper from './components/Popper'
 
 import useStyles from './styles'
 
 export default function Header() {
-  const classes = useStyles()
   const history = useHistory()
+  const location = useLocation()
+  const { isLanding } = useGlobalData()
+  const classes = useStyles({ isLanding })
+
   const [openMenu, setOpenMenu] = useState(false)
   const [openTierra, setOpenTierra] = useState(null)
   const [openProfile, setOpenProfile] = useState(null)
+
+  const logo = isLanding ? Logo : Nowlogo
+  const logo2 = isLanding ? Logo2 : Nowlogo2
+  const profile = isLanding ? MenuProfile : MenuProfileDark
+  const profile2 = isLanding ? MenuProfile2 : MenuProfileDark
+  const tierra = isLanding ? MenuTierra : MenuTierraDark
+  const tierra2 = isLanding ? MenuTierra2 : MenuTierraDark
+
+  useLayoutEffect(() => {
+    if (location.hash !== '') {
+      const a = document.createElement('a')
+      a.href = location.hash
+      a.click()
+    }
+  }, [location.hash])
 
   return (
     <AppBar
@@ -29,7 +52,7 @@ export default function Header() {
       className={classes.header}
     >
       <Box className={classes.logo} onClick={() => history.push('/')}>
-        <img src={Logo} alt="rocket now" srcSet={`${Logo2} 2x`} />
+        <img src={logo} alt="rocket now" srcSet={`${logo2} 2x`} />
       </Box>
 
       <Box className={classes.subtoolbar}>
@@ -39,11 +62,7 @@ export default function Header() {
           type="tierra"
         >
           <IconButton onClick={() => setOpenTierra((prev) => !prev)}>
-            <img
-              src={MenuTierra}
-              srcSet={`${MenuTierra2} 2x`}
-              alt="Menu Tierra"
-            />
+            <img src={tierra} srcSet={`${tierra2} 2x`} alt="Menu Tierra" />
           </IconButton>
         </MenuPopper>
         <MenuPopper
@@ -52,11 +71,7 @@ export default function Header() {
           type="Profile"
         >
           <IconButton onClick={() => setOpenProfile((prev) => !prev)}>
-            <img
-              src={MenuProfile}
-              srcSet={`${MenuProfile2} 2x`}
-              alt="Menu Profile"
-            />
+            <img src={profile} srcSet={`${profile2} 2x`} alt="Menu Profile" />
           </IconButton>
         </MenuPopper>
 
@@ -67,7 +82,6 @@ export default function Header() {
         >
           <IconButton
             onClick={() => setOpenMenu((prev) => !prev)}
-            color="primary"
             aria-label="menu"
             className={classes.burger}
           >

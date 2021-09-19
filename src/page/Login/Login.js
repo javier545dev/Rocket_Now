@@ -23,14 +23,11 @@ const Login = () => {
     event.preventDefault()
     try {
       const { data: payload } = await login(data)
-      localStorage.setItem('token', payload.access_token)
-      localStorage.setItem('token_type', payload.token_type)
-      localStorage.setItem('expires_at', payload.expires_at)
+      globalAction.loginAction(payload)
       setData({
         email: '',
         password: ''
       })
-      globalAction.loginAction()
       history.push('/')
     } catch (error) {
       setData({

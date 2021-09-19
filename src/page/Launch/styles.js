@@ -7,19 +7,20 @@ export default makeStyles(() => ({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#454857',
-    padding: '0 5%',
     height: '100%',
     width: '100%',
     borderRadius: '180px 0 0 0'
   },
   btn: {
     height: '50px',
-    margin: '20px 0',
+    margin: '5px 0 35px 0',
     '& > span': {
       fontFamily: 'Montserrat !important',
       fontWeight: '500',
       fontSize: 16,
-      letterSpacing: '0.10rem'
+      letterSpacing: '0.08rem',
+      textTransform: 'uppercase',
+      padding: 15
     }
   },
   btn2: {
@@ -72,7 +73,10 @@ export default makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
-    alignItems: 'center'
+    alignItems: 'center',
+    position: 'relative',
+    padding: '0 5%',
+    marginBottom: 30
   },
   input: {
     color: 'white',
@@ -123,6 +127,15 @@ export default makeStyles(() => ({
     fontFamily: 'Montserrat !important',
     fontWeight: 500,
     paddingBottom: '10px',
-    paddingTop: '20px'
+    paddingTop: '20px',
+    padding: '0 5%'
+  },
+  boxBlank: {
+    height: 80,
+    width: '100%',
+    position: 'absolute',
+    backgroundColor: '#fff',
+    bottom: '-28px',
+    boxShadow: '-2px 3px 6px 0px #7a7c86'
   }
 }))

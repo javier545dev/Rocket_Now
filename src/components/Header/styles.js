@@ -44,5 +44,10 @@ export default makeStyles(({ breakpoints }) => ({
         }
       }
     }
+  },
+  burger: {
+    '& > span > svg': {
+      color: ({ isLanding }) => (isLanding ? '#ffffff' : '#454857')
+    }
   }
 }))

@@ -20,7 +20,7 @@ const Main = () => {
   }
 
   return (
-    <Box className={classes.root}>
+    <Box className={classes.root} id="moon">
       <Typography variant="h5" className={classes.title} color="primary">
         Luna
       </Typography>

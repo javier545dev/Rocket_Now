@@ -8,7 +8,8 @@
       "@Theme/*": ["src/theme/*"],
       "@API/*": ["src/api/*"],
       "@Hooks/*": ["src/hooks/*"],
-      "@Context/*": ["src/contexts/*"]
+      "@Context/*": ["src/contexts/*"],
+      "@Page/*": ["src/page/*"]
     }
   },
   "exclude": ["node_modules", "dist", "build"]

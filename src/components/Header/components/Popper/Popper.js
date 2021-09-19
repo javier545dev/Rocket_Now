@@ -36,8 +36,8 @@ export default function MenuPopper({ open, onClose, children, type }) {
               <ClickAwayListener onClickAway={onClose}>
                 <Paper className={classes.popoverRoot} elevation={0} square>
                   <span className={classes.arrow} ref={setArrowRef} />
-                  <Box>
-                    {type === 'menu' && <Menu />}
+                  <Box height="100%">
+                    {type === 'menu' && <Menu onClose={onClose} />}
                     {type === 'tierra' && <MenuTierra />}
                     {type === 'profile' && <MenuProfile />}
                   </Box>

@@ -53,5 +53,15 @@ export default makeStyles(() => ({
     alignItems: 'center',
     justifyContent: 'center',
     BackgroundColor: 'white'
+  },
+  boxItem: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'overlay',
+    width: '100%',
+    height: 'calc(100% - 103px)',
+    color: 'white'
   }
 }))

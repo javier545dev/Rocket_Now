@@ -3,7 +3,7 @@ import { Main, Moon, Earth } from '../../components'
 
 function Landing() {
   return (
-    <Box>
+    <Box style={{ scrollBehavior: 'smooth' }}>
       <Box id="Main">
         <Main />
       </Box>

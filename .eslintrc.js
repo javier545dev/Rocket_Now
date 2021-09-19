@@ -23,6 +23,7 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
+    'no-useless-return': 'off',
     'react/jsx-uses-vars': 'error',
     'react/display-name': 'off',
     'react/prop-types': 'off',
