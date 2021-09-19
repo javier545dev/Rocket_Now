@@ -200,7 +200,7 @@ export default function Signup() {
           Privacidad
         </Typography>
         <Button
-          type="submit"
+          type="button"
           fullWidth
           variant="outlined"
           color="primary"
