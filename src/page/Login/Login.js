@@ -71,7 +71,7 @@ const Login = () => {
         alt="Estrellaroja"
         className={classes.estrellaroja}
       />
-      <Typography variant="h5" className={classes.title} color="primary">
+      <Typography variant="h5" className={classes.titleHead} color="primary">
         LOG IN
       </Typography>
       <form size="small" className={classes.form} method="post">
@@ -126,7 +126,13 @@ const Login = () => {
           color="primary"
         >
           Aun no eres miembro?{' '}
-          <Link href="#" variant="body2" color="inherit" underline="always">
+          <Link
+            href="#"
+            variant="body2"
+            color="inherit"
+            underline="always"
+            onClick={() => history.push('/signup')}
+          >
             Haz clic aqui para registrarte
           </Link>
         </Typography>

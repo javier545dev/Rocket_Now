@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core'
 
 export default makeStyles(() => ({
   root: {
-    height: '100vh',
+    height: '60vh',
     width: '100%',
     display: 'flex',
     flexDirection: 'column',

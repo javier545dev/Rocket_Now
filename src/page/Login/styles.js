@@ -5,7 +5,7 @@ export default makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flexStart',
     backgroundColor: '#454857',
     padding: '0 30px',
     height: 'calc(100vh - 80px)',
@@ -61,7 +61,7 @@ export default makeStyles(() => ({
   },
   input: {
     color: 'white',
-    margin: '5px auto',
+    margin: '2% auto',
     width: '100%',
     height: '4rem'
   },
@@ -70,16 +70,16 @@ export default makeStyles(() => ({
   },
   orbit: {
     position: 'absolute',
-    width: '40%',
-    top: '12.6%',
-    left: '60%',
+    width: '35%',
+    top: '13.6%',
+    left: '65%',
     objectFit: 'cover'
   },
   orbit2: {
-    position: 'absolute',
+    position: 'fixed',
     width: '35%',
     top: '87%',
-    left: '0%',
+    left: '-4%',
     objectFit: 'cover',
     transform: 'rotate(200deg)'
   },
@@ -87,13 +87,20 @@ export default makeStyles(() => ({
     textAlign: 'center',
     margin: '10px 0',
     fontFamily: 'Montserrat !important',
-    fontWeight: 500,
-    paddingBottom: '20px'
+    fontWeight: 500
   },
   title: {
-    margin: '10px 0',
+    marginTop: '30px',
     fontFamily: 'Montserrat !important',
     fontWeight: 500,
-    paddingBottom: '30px'
+    paddingBottom: '10px',
+    paddingTop: '10%'
+  },
+  titleHead: {
+    marginBlock: '30px',
+    fontFamily: 'Montserrat !important',
+    fontWeight: 500,
+    paddingBottom: '16px',
+    paddingTop: '50px'
   }
 }))

@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core'
 import useStyles from './styles'
 import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { Facebook } from '@material-ui/icons/'
 import Launch from './../Launch/Launch'
 import Orbit2 from '@Assets/images/orbit@2x.png'
@@ -15,6 +16,7 @@ import Estrellablanca from '@Assets/images/estrellablanca.png'
 import Estrellaroja from '@Assets/images/estrellaroja.png'
 
 export default function Signup() {
+  const history = useHistory()
   const [view, setView] = useState(null)
 
   const [sign, setSign] = useState({
@@ -26,6 +28,12 @@ export default function Signup() {
 
   const handleFormSignup = async (e) => {
     e.preventDefault()
+    if (e.key === 'Enter') {
+      if (!sign.name.trim() & !sign.email.trim() & !sign.password()) {
+        alert('No pueden haber campos vacios')
+        return
+      }
+    }
     setView(true)
   }
 
@@ -62,7 +70,7 @@ export default function Signup() {
           alt="Estrellaroja"
           className={classes.estrellaroja}
         />
-        <Typography variant="h5" className={classes.title} color="primary">
+        <Typography variant="h5" className={classes.titleHead} color="primary">
           CREAR CUENTA
         </Typography>
         <form size="small" className={classes.form} method="post">
@@ -85,7 +93,6 @@ export default function Signup() {
               setSign((prev) => ({ ...prev, name: e.target.value }))
             }
             autoComplete="off"
-            autoFocus
           />
           <TextField
             className={classes.input}
@@ -171,7 +178,12 @@ export default function Signup() {
             color="primary"
           >
             Tienes una cuenta?{' '}
-            <Link href="#" variant="body2" color="inherit" underline="always">
+            <Link
+              variant="body2"
+              color="inherit"
+              underline="always"
+              onClick={() => history.push('/login')}
+            >
               Ingresa aqui
             </Link>
           </Typography>

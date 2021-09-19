@@ -1,27 +1,71 @@
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core'
 
-export default makeStyles((theme) => ({
+export default makeStyles(() => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: '0 10px',
-    height: 'calc(230vh - 80px)',
-    width: '100%'
-  },
-  card: {
+    justifyContent: 'center',
+    backgroundColor: '#454857',
+    padding: '0 5%',
+    height: '100%',
     width: '100%',
+    borderRadius: '180px 0 0 0'
+  },
+  btn: {
+    height: '50px',
+    margin: '20px 0',
+    '& > span': {
+      fontFamily: 'Montserrat !important',
+      fontWeight: '500',
+      fontSize: 16,
+      letterSpacing: '0.10rem'
+    }
+  },
+  btn2: {
+    height: '40px',
+    margin: '10px 0',
+    '& > span': {
+      fontFamily: 'Montserrat !important',
+      fontWeight: '500',
+      fontSize: 14,
+      letterSpacing: '0.10rem'
+    }
+  },
+  ref: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
-    padding: 10,
-    marginBlock: '10px'
+    alignSelf: 'baseline'
   },
-  title: {
-    textAlign: 'center',
-    margin: '10px 0',
-    fontFamily: 'Orbitron !important',
-    fontWeight: 500
+  estrellablanca: {
+    position: 'absolute',
+    width: 10,
+    top: '15%',
+    left: '93%'
+  },
+  estrellablanca1: {
+    position: 'absolute',
+    width: 7,
+    top: '25%',
+    left: '30%'
+  },
+  estrellablanca2: {
+    position: 'absolute',
+    width: 10,
+    top: '90%',
+    left: '6%'
+  },
+  estrellablanca3: {
+    position: 'absolute',
+    width: 5,
+    top: '95%',
+    left: '90%'
+  },
+  estrellaroja: {
+    position: 'absolute',
+    width: 10,
+    bottom: '15%',
+    right: '10%'
   },
   form: {
     width: '100%',
@@ -31,14 +75,54 @@ export default makeStyles((theme) => ({
     alignItems: 'center'
   },
   input: {
-    margin: '10px auto',
-    width: '100%'
+    color: 'white',
+    margin: '5px auto',
+    width: '100%',
+    height: '4rem'
   },
-  btn: {
+  inputMultiline: {
+    color: 'black',
+    margin: '5px auto',
+    width: '100%',
+    height: '4rem'
+  },
+  notchedOutline: {
+    borderColor: 'white !important'
+  },
+  orbit: {
+    position: 'absolute',
+    width: '40%',
+    top: '12.6%',
+    left: '60%',
+    objectFit: 'cover'
+  },
+  orbit2: {
+    position: 'absolute',
+    width: '35%',
+    top: '87%',
+    left: '0%',
+    objectFit: 'cover',
+    transform: 'rotate(200deg)'
+  },
+  subtitle: {
+    textAlign: 'center',
     margin: '10px 0',
-    '& > span': {
-      fontFamily: 'Orbitron !important',
-      letterSpacing: '0.18rem'
-    }
+    fontFamily: 'Montserrat !important',
+    fontWeight: 500,
+    paddingBottom: '20px'
+  },
+  title: {
+    marginTop: '10px',
+    fontFamily: 'Montserrat !important',
+    fontWeight: 500,
+    paddingBottom: '10px',
+    paddingTop: '20px'
+  },
+  titleHead: {
+    marginTop: '30px',
+    fontFamily: 'Montserrat !important',
+    fontWeight: 500,
+    paddingBottom: '10px',
+    paddingTop: '20px'
   }
 }))

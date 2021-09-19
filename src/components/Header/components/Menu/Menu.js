@@ -1,20 +1,7 @@
-import { MenuItem, Box, IconButton } from '@material-ui/core'
+import { MenuItem, Box, IconButton, Typography } from '@material-ui/core'
 import { Facebook, Instagram, Twitter } from '@material-ui/icons/'
 import Orbit2 from '@Assets/images/orbit@2x.png'
 import useStyles from './styles'
-
-const earths = [
-  { name: 'luna', logo: 'icon' },
-  { name: 'tierra', logo: ' icon' },
-  { name: 'mercurio', logo: ' icon' },
-  { name: 'venus', logo: 'icon ' },
-  { name: 'marte', logo: ' icon' },
-  { name: 'jupiter', logo: 'icon' },
-  { name: 'saturno', logo: ' icon' },
-  { name: 'urano', logo: ' icon' },
-  { name: 'neptuno', logo: 'icon ' },
-  { name: 'pluton', logo: ' icon' }
-]
 
 const Menu = () => {
   const classes = useStyles()
@@ -28,15 +15,49 @@ const Menu = () => {
           width: '100%',
           height: 20,
           color: 'white',
-          paddingTop: 20
+          paddingTop: '3vh'
         }}
       >
-        {earths.map(({ name, logo }) => (
-          <MenuItem key={name} className={classes.menuItem}>
-            <Box className={classes.logo}>{logo}</Box>
-            <Box className={classes.title}>{name}</Box>
-          </MenuItem>
-        ))}
+        <MenuItem className={classes.menuItem}>
+          <Box className={classes.logo}>logo</Box>
+          <Typography className={classes.title}>LUNA</Typography>
+        </MenuItem>
+        <MenuItem className={classes.menuItem}>
+          <Box className={classes.logo}>logo</Box>
+          <Typography className={classes.title}>TIERRA</Typography>
+        </MenuItem>
+        <MenuItem className={classes.menuItem}>
+          <Box className={classes.logo}>logo</Box>
+          <Typography className={classes.title}>MERCURIO</Typography>
+        </MenuItem>
+        <MenuItem className={classes.menuItem}>
+          <Box className={classes.logo}>logo</Box>
+          <Typography className={classes.title}>VENUS</Typography>
+        </MenuItem>
+        <MenuItem className={classes.menuItem}>
+          <Box className={classes.logo}>logo</Box>
+          <Typography className={classes.title}>MARTE</Typography>
+        </MenuItem>
+        <MenuItem className={classes.menuItem}>
+          <Box className={classes.logo}>logo</Box>
+          <Typography className={classes.title}>JUPITER</Typography>
+        </MenuItem>
+        <MenuItem className={classes.menuItem}>
+          <Box className={classes.logo}>logo</Box>
+          <Typography className={classes.title}>SATURNO</Typography>
+        </MenuItem>
+        <MenuItem className={classes.menuItem}>
+          <Box className={classes.logo}>logo</Box>
+          <Typography className={classes.title}>URANO</Typography>
+        </MenuItem>
+        <MenuItem className={classes.menuItem}>
+          <Box className={classes.logo}>logo</Box>
+          <Typography className={classes.title}>NEPTUNO</Typography>
+        </MenuItem>
+        <MenuItem className={classes.menuItem}>
+          <Box className={classes.logo}>logo</Box>
+          <Typography className={classes.title}>PLUTON</Typography>
+        </MenuItem>
       </Box>
       <Box className={classes.footer}>
         <MenuItem className={classes.footerText}>About Us</MenuItem>

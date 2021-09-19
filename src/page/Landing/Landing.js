@@ -4,10 +4,10 @@ import { Main, Moon, Earth } from '../../components'
 function Landing() {
   return (
     <Box>
-      <Box>
+      <Box id="Main">
         <Main />
       </Box>
-      <Box>
+      <Box id="#Moon">
         <Moon />
       </Box>
       <Box>

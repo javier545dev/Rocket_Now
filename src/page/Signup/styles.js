@@ -110,5 +110,11 @@ export default makeStyles((theme) => ({
     left: '0%',
     objectFit: 'cover',
     transform: 'rotate(200deg)'
+  },
+  titleHead: {
+    fontFamily: 'Montserrat !important',
+    fontWeight: 500,
+    paddingBottom: '5%',
+    paddingTop: '15%'
   }
 }))
