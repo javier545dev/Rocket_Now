@@ -68,7 +68,7 @@ export default function Header() {
         <MenuPopper
           open={openProfile}
           onClose={() => setOpenProfile(false)}
-          type="Profile"
+          type="profile"
         >
           <IconButton onClick={() => setOpenProfile((prev) => !prev)}>
             <img src={profile} srcSet={`${profile2} 2x`} alt="Menu Profile" />
