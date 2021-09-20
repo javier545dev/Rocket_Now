@@ -98,23 +98,23 @@ export default makeStyles((theme) => ({
   },
   orbit: {
     position: 'absolute',
-    width: '40%',
-    top: '12.6%',
-    left: '60%',
+    width: '35%',
+    top: 81,
+    right: 0,
     objectFit: 'cover'
   },
   orbit2: {
     position: 'fixed',
     width: '35%',
     top: '87%',
-    left: '0%',
+    left: '-4%',
     objectFit: 'cover',
     transform: 'rotate(200deg)'
   },
   titleHead: {
     fontFamily: 'Montserrat !important',
     fontWeight: 500,
-    paddingBottom: '5%',
+    paddingBottom: '12%',
     paddingTop: '15%'
   }
 }))

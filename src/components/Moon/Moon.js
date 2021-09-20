@@ -4,10 +4,11 @@ import Estrellablanca from '@Assets/images/estrellablanca.png'
 import Estrellaroja from '@Assets/images/estrellaroja.png'
 import Rocket from '@Assets/images/rocket.png'
 import Tierra from '@Assets/images/menutierra@2x.png'
+import GlowBlue from '@Assets/images/glowblue.png'
 
 import useStyles from './styles'
 
-const Main = () => {
+const Moon = () => {
   const classes = useStyles()
 
   const styles = {
@@ -25,6 +26,7 @@ const Main = () => {
         Luna
       </Typography>
       <Box className={classes.planeta} style={styles.paperContainer}></Box>
+      <img src={GlowBlue} alt="Rocket" className={classes.glowblue} />
       <img
         src={Estrellablanca}
         alt="Estrellablanca"
@@ -73,4 +75,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Moon

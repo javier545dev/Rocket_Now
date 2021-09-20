@@ -57,6 +57,7 @@ export default {
       }
     },
     multiline: {
+      color: '#454857',
       background: 'white',
       borderRadius: 10,
       boxShadow: '0px 3px 7px 0px rgba(0,0,0,0.49)',
@@ -66,6 +67,16 @@ export default {
     },
     colorSecundary: {
       background: 'white'
+    }
+  },
+  MuiFormLabel: {
+    disabled: {
+      color: 'white'
+    }
+  },
+  MuiInputBase: {
+    input: {
+      color: 'white'
     }
   },
 

@@ -5,6 +5,7 @@ import Estrellaroja from '@Assets/images/estrellaroja.png'
 import Rocket from '@Assets/images/rocket.png'
 import Tierra from '@Assets/images/menutierra@2x.png'
 import Candado from '@Assets/images/candado.png'
+import Orbit2 from '@Assets/images/orbit@2x.png'
 
 import useStyles from './styles'
 
@@ -22,8 +23,9 @@ const Main = () => {
 
   return (
     <Box className={classes.root}>
+      <img src={Orbit2} alt="Orbit" className={classes.orbit} />
       <Typography variant="h5" className={classes.title} color="primary">
-        TIERRA
+        Tierra
       </Typography>
       <Box className={classes.planeta} style={styles.paperContainer}>
         <img src={Candado} alt="candado" className={classes.candado} />

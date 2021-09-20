@@ -17,18 +17,13 @@ export default makeStyles(() => ({
     fontFamily: 'Orbitron !important',
     fontWeight: 500,
     paddingBottom: '0.5rem',
-    marginBottom: '5rem'
+    marginBottom: '8rem'
   },
   buttons: {
     height: '2.5rem',
     width: '10rem',
     marginBottom: '1rem',
     boxShadow: '0px 5px 5px 1px rgba(220,0,253,0.3)'
-  },
-  astronaut: {
-    width: 150,
-    marginBottom: 50,
-    zIndex: 1
   },
   estrellablanca: {
     position: 'absolute',
@@ -50,9 +45,10 @@ export default makeStyles(() => ({
   },
   estrellablanca3: {
     position: 'absolute',
-    width: 20,
+    width: 80,
     top: 30,
-    right: '10%'
+    right: '10%',
+    objectFit: 'cover'
   },
   estrellablanca4: {
     position: 'absolute',
@@ -66,11 +62,17 @@ export default makeStyles(() => ({
     bottom: 90,
     right: '10%'
   },
+  glowblue: {
+    position: 'absolute',
+    width: 45,
+    bottom: '1%',
+    right: '80%'
+  },
   rocket: {
     position: 'absolute',
     width: '80px',
     top: '20%',
-    right: '37%',
+    right: '40%',
     transform: 'rotate(340deg)'
   },
   planeta: {

@@ -14,16 +14,18 @@ export default makeStyles(() => ({
   },
   orbit: {
     position: 'absolute',
-    width: 100,
-    top: 3,
-    left: '69%'
+    width: '35%',
+    top: 0,
+    right: 0,
+    objectFit: 'cover'
   },
   orbit2: {
-    position: 'absolute',
-    width: 100,
-    top: 410,
-    left: '-5%',
-    transform: 'rotate(180deg)'
+    position: 'fixed',
+    width: '30%',
+    bottom: -50,
+    left: -20,
+    objectFit: 'cover',
+    transform: 'rotate(220deg)'
   },
   logo: {
     display: 'flex',

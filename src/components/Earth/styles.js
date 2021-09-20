@@ -48,7 +48,7 @@ export default makeStyles(() => ({
   },
   estrellablanca3: {
     position: 'absolute',
-    width: 20,
+    width: 80,
     top: 30,
     right: '10%'
   },
@@ -64,12 +64,22 @@ export default makeStyles(() => ({
     bottom: 90,
     right: '10%'
   },
+  orbit: {
+    position: 'absolute',
+    width: '35%',
+    top: 0,
+    right: -15,
+    objectFit: 'cover',
+    transform: 'rotate(45deg)'
+  },
   rocket: {
     position: 'absolute',
-    width: '70px',
-    top: '35%',
-    right: '65%',
-    zIndex: 2
+    width: 90,
+    top: 40,
+    right: 280,
+    zIndex: 2,
+    objectFit: 'cover',
+    transform: 'rotate(120deg)'
   },
   planeta: {
     display: 'flex',
