@@ -56,6 +56,9 @@ export default {
         background: 'white'
       }
     },
+    inputMultiline: {
+      color: '#454857'
+    },
     multiline: {
       color: '#454857',
       background: 'white',
