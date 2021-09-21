@@ -12,6 +12,10 @@ export default makeStyles(() => ({
     gridTemplateColumns: '1fr 1fr',
     gap: 10
   },
+  icon: {
+    height: 20,
+    width: 20
+  },
   orbit: {
     position: 'absolute',
     width: '35%',

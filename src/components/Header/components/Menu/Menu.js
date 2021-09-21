@@ -2,6 +2,8 @@
 import { MenuItem, Box, IconButton, Typography } from '@material-ui/core'
 import { Facebook, Instagram, Twitter } from '@material-ui/icons/'
 import Orbit2 from '@Assets/images/orbit@2x.png'
+import Tierra from '@Assets/images/menutierra@1x.png'
+
 import { useGlobalData } from '@Hooks'
 import { useHistory } from 'react-router-dom'
 import useStyles from './styles'
@@ -35,7 +37,9 @@ const Menu = ({ onClose }) => {
       <img src={Orbit2} alt="Orbit" className={classes.orbit2} />
       <Box className={classes.boxItem}>
         <MenuItem className={classes.menuItem} {...propsItem('moon')}>
-          <Box className={classes.logo}>logo</Box>
+          <Box className={classes.logo}>
+            <img src={Tierra} alt="Icon" className={classes.icon} />
+          </Box>
           <Typography className={classes.title}>LUNA</Typography>
         </MenuItem>
         <MenuItem
@@ -44,7 +48,9 @@ const Menu = ({ onClose }) => {
           href="#"
           onClick={onClose}
         >
-          <Box className={classes.logo}>logo</Box>
+          <Box className={classes.logo}>
+            <img src={Tierra} alt="Icon" className={classes.icon} />
+          </Box>
           <Typography className={classes.title}>TIERRA</Typography>
         </MenuItem>
         <MenuItem
@@ -53,7 +59,9 @@ const Menu = ({ onClose }) => {
           href="#"
           onClick={onClose}
         >
-          <Box className={classes.logo}>logo</Box>
+          <Box className={classes.logo}>
+            <img src={Tierra} alt="Icon" className={classes.icon} />
+          </Box>
           <Typography className={classes.title}>MERCURIO</Typography>
         </MenuItem>
         <MenuItem
@@ -62,7 +70,9 @@ const Menu = ({ onClose }) => {
           href="#"
           onClick={onClose}
         >
-          <Box className={classes.logo}>logo</Box>
+          <Box className={classes.logo}>
+            <img src={Tierra} alt="Icon" className={classes.icon} />
+          </Box>
           <Typography className={classes.title}>VENUS</Typography>
         </MenuItem>
         <MenuItem
@@ -71,7 +81,9 @@ const Menu = ({ onClose }) => {
           href="#"
           onClick={onClose}
         >
-          <Box className={classes.logo}>logo</Box>
+          <Box className={classes.logo}>
+            <img src={Tierra} alt="Icon" className={classes.icon} />
+          </Box>
           <Typography className={classes.title}>MARTE</Typography>
         </MenuItem>
         <MenuItem
@@ -80,7 +92,9 @@ const Menu = ({ onClose }) => {
           href="#"
           onClick={onClose}
         >
-          <Box className={classes.logo}>logo</Box>
+          <Box className={classes.logo}>
+            <img src={Tierra} alt="Icon" className={classes.icon} />
+          </Box>
           <Typography className={classes.title}>JUPITER</Typography>
         </MenuItem>
         <MenuItem
@@ -89,7 +103,9 @@ const Menu = ({ onClose }) => {
           href="#"
           onClick={onClose}
         >
-          <Box className={classes.logo}>logo</Box>
+          <Box className={classes.logo}>
+            <img src={Tierra} alt="Icon" className={classes.icon} />
+          </Box>
           <Typography className={classes.title}>SATURNO</Typography>
         </MenuItem>
         <MenuItem
@@ -98,7 +114,9 @@ const Menu = ({ onClose }) => {
           href="#"
           onClick={onClose}
         >
-          <Box className={classes.logo}>logo</Box>
+          <Box className={classes.logo}>
+            <img src={Tierra} alt="Icon" className={classes.icon} />
+          </Box>
           <Typography className={classes.title}>URANO</Typography>
         </MenuItem>
         <MenuItem
@@ -107,7 +125,9 @@ const Menu = ({ onClose }) => {
           href="#"
           onClick={onClose}
         >
-          <Box className={classes.logo}>logo</Box>
+          <Box className={classes.logo}>
+            <img src={Tierra} alt="Icon" className={classes.icon} />
+          </Box>
           <Typography className={classes.title}>NEPTUNO</Typography>
         </MenuItem>
         <MenuItem
@@ -116,7 +136,9 @@ const Menu = ({ onClose }) => {
           href="#"
           onClick={onClose}
         >
-          <Box className={classes.logo}>logo</Box>
+          <Box className={classes.logo}>
+            <img src={Tierra} alt="Icon" className={classes.icon} />
+          </Box>
           <Typography className={classes.title}>PLUTON</Typography>
         </MenuItem>
       </Box>
