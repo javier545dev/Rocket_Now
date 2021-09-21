@@ -1,5 +1,5 @@
 import { Box, Button, Typography } from '@material-ui/core'
-
+import { useHistory } from 'react-router-dom'
 import Estrellablanca from '@Assets/images/estrellablanca.png'
 import Estrellaroja from '@Assets/images/estrellaroja.png'
 import Rocket from '@Assets/images/rocket.png'
@@ -9,6 +9,7 @@ import GlowBlue from '@Assets/images/glowblue.png'
 import useStyles from './styles'
 
 const Moon = () => {
+  const history = useHistory()
   const classes = useStyles()
 
   const styles = {
@@ -66,10 +67,11 @@ const Moon = () => {
 
       <Button
         variant="contained"
-        className={classes.buttons}
         style={{ color: 'purple' }}
+        className={classes.buttons}
+        onClick={() => history.push('/signup')}
       >
-        Empieza Aqui
+        EMPIEZA AQUI
       </Button>
     </Box>
   )

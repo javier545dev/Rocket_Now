@@ -19,7 +19,7 @@ export default makeStyles(() => ({
   },
   buttons: {
     height: '2.5rem',
-    width: '10rem',
+    width: '13rem',
     marginBottom: '1rem',
     boxShadow: '0px 5px 5px 1px rgba(220,0,253,0.3)'
   },
@@ -48,7 +48,7 @@ export default makeStyles(() => ({
   },
   estrellablanca3: {
     position: 'absolute',
-    width: 80,
+    width: 5,
     top: 30,
     right: '10%'
   },
@@ -66,11 +66,10 @@ export default makeStyles(() => ({
   },
   orbit: {
     position: 'absolute',
-    width: '35%',
-    top: 0,
-    right: -15,
-    objectFit: 'cover',
-    transform: 'rotate(45deg)'
+    width: '25%',
+    top: -40,
+    right: 15,
+    objectFit: 'cover'
   },
   rocket: {
     position: 'absolute',

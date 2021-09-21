@@ -5,7 +5,7 @@ import Estrellaroja from '@Assets/images/estrellaroja.png'
 import Rocket from '@Assets/images/rocket.png'
 import Tierra from '@Assets/images/menutierra@2x.png'
 import Candado from '@Assets/images/candado.png'
-import Orbit2 from '@Assets/images/orbit@2x.png'
+import Orbit2 from '@Assets/images/Orbit2.png'
 
 import useStyles from './styles'
 
@@ -67,7 +67,11 @@ const Main = () => {
       />
       <img src={Rocket} alt="Rocket" className={classes.rocket} />
 
-      <Button variant="contained" className={classes.buttons}>
+      <Button
+        variant="contained"
+        style={{ color: 'purple' }}
+        className={classes.buttons}
+      >
         UPGRADE
       </Button>
     </Box>

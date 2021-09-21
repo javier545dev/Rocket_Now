@@ -12,8 +12,9 @@ export default makeStyles(() => ({
     borderRadius: '180px 0 0 0'
   },
   btn: {
-    height: '50px',
-    margin: '5px 0 35px 0',
+    height: '3rem',
+    width: '13rem',
+    marginBottom: 40,
     '& > span': {
       fontFamily: 'Montserrat !important',
       fontWeight: '500',
@@ -22,21 +23,6 @@ export default makeStyles(() => ({
       textTransform: 'uppercase',
       padding: 15
     }
-  },
-  btn2: {
-    height: '40px',
-    margin: '10px 0',
-    '& > span': {
-      fontFamily: 'Montserrat !important',
-      fontWeight: '500',
-      fontSize: 14,
-      letterSpacing: '0.10rem'
-    }
-  },
-  ref: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignSelf: 'baseline'
   },
   estrellablanca: {
     position: 'absolute',
@@ -75,7 +61,7 @@ export default makeStyles(() => ({
     justifyContent: 'space-around',
     alignItems: 'center',
     position: 'relative',
-    padding: '0 5%',
+    padding: '0 8%',
     marginBottom: 30
   },
   input: {
@@ -90,8 +76,17 @@ export default makeStyles(() => ({
     width: '100%',
     height: '4rem'
   },
+  media: {
+    width: '100%',
+    margin: 'auto'
+  },
   notchedOutline: {
     borderColor: 'white !important'
+  },
+  ref: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignSelf: 'baseline'
   },
   orbit: {
     position: 'absolute',
@@ -102,40 +97,36 @@ export default makeStyles(() => ({
   },
   orbit2: {
     position: 'absolute',
-    width: '35%',
-    top: '87%',
-    left: '0%',
+    width: '30%',
+    bottom: 5,
+    left: -10,
     objectFit: 'cover',
-    transform: 'rotate(200deg)'
+    transform: 'rotate(230deg)'
   },
-  subtitle: {
-    textAlign: 'center',
-    margin: '10px 0',
-    fontFamily: 'Montserrat !important',
-    fontWeight: 500,
-    paddingBottom: '20px'
+  rocket: {
+    width: 130,
+    marginBottom: 40,
+    zIndex: 2
   },
   title: {
-    marginTop: '10px',
+    textAlign: 'center',
+    marginTop: 20,
     fontFamily: 'Montserrat !important',
     fontWeight: 500,
-    paddingBottom: '10px',
-    paddingTop: '20px'
+    paddingBottom: 0
+  },
+  title1: {
+    textAlign: 'center',
+    marginTop: 0,
+    fontFamily: 'Montserrat !important',
+    fontWeight: 500,
+    paddingBottom: 40
   },
   titleHead: {
-    marginTop: '30px',
     fontFamily: 'Montserrat !important',
     fontWeight: 500,
-    paddingBottom: '10px',
-    paddingTop: '20px',
+    paddingBottom: 0,
+    paddingTop: 80,
     padding: '0 5%'
-  },
-  boxBlank: {
-    height: 80,
-    width: '100%',
-    position: 'absolute',
-    backgroundColor: '#fff',
-    bottom: '-28px',
-    boxShadow: '-2px 3px 6px 0px #7a7c86'
   }
 }))

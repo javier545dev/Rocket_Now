@@ -103,13 +103,20 @@ export default function Launch({ sign }) {
             enim quis cupiditate, mollitia quae nemo ad modi distinctio esse.
           </Typography>
           <Box className={classes.ref}>
-            <Link href="#" variant="body1" color="primary" underline="always">
+            <Link
+              href="#"
+              variant="body1"
+              color="primary"
+              underline="always"
+              onClick={() => history.push('/Saber')}
+            >
               +Saber mas
             </Link>
             <Button
               variant="contained"
               color="primary"
               className={classes.btn2}
+              onClick={() => history.push('/Asesoria')}
             >
               Asesoria
             </Button>

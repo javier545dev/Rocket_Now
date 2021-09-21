@@ -5,8 +5,7 @@ import { useLocation } from 'react-router-dom'
 const initialData = {
   isAuth: false,
   user: {},
-  isLanding: false,
-  isSaber: false
+  isLanding: false
 }
 
 const GlobalContext = createContext(initialData)
@@ -15,7 +14,6 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(globalReducer, initialData)
   const location = useLocation()
   const isLanding = location.pathname === '/'
-  const isSaber = location.pathname === '/'
 
   const loginAction = (payload) => {
     localStorage.setItem('token', payload.access_token)
@@ -38,8 +36,7 @@ export const GlobalProvider = ({ children }) => {
     reAuth,
     loginAction,
     logoutAuth,
-    isLanding,
-    isSaber
+    isLanding
   }
 
   return (

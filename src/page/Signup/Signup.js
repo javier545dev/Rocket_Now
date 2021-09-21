@@ -121,7 +121,7 @@ export default function Signup() {
           name="firstName"
           variant="outlined"
           color="primary"
-          // required
+          required
           fullWidth
           id="name"
           label="Nombre"

@@ -1,7 +1,15 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Box } from '@material-ui/core'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import { Landing, Login, Error404, Signup } from './page'
+import {
+  Asesoria,
+  Error404,
+  Gracias,
+  Landing,
+  Login,
+  Saber,
+  Signup
+} from '@Page/'
 import { Header, Loader } from '@Components'
 import { profile } from '@API/actions'
 import { useGlobalActions, useGlobalData } from '@Hooks'
@@ -59,7 +67,16 @@ function App() {
               exact
               render={() => (!isAuth ? <Signup /> : <Redirect to="/" />)}
             />
+            <Route
+              path="/launch"
+              exact
+              render={() => (!isAuth ? <Signup /> : <Redirect to="/" />)}
+            />
             <Route path="/" exact component={Landing} />
+            <Route path="/saber" exact component={Saber} />
+            <Route path="/asesoria" exact component={Asesoria} />
+            <Route path="/gracias" exact component={Gracias} />
+
             <Route path="*" component={Error404} />
           </Switch>
         </>

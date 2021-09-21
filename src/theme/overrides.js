@@ -79,7 +79,11 @@ export default {
       color: 'white'
     }
   },
-
+  MuiFormHelperText: {
+    root: {
+      color: 'white'
+    }
+  },
   MuiCssBaseline: {
     '@global': {
       ...globalResets

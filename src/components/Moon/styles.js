@@ -21,7 +21,7 @@ export default makeStyles(() => ({
   },
   buttons: {
     height: '2.5rem',
-    width: '10rem',
+    width: '13rem',
     marginBottom: '1rem',
     boxShadow: '0px 5px 5px 1px rgba(220,0,253,0.3)'
   },
@@ -45,7 +45,7 @@ export default makeStyles(() => ({
   },
   estrellablanca3: {
     position: 'absolute',
-    width: 80,
+    width: 10,
     top: 30,
     right: '10%',
     objectFit: 'cover'
