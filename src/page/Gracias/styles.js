@@ -14,7 +14,7 @@ export default makeStyles(() => ({
   btn: {
     height: '3rem',
     width: '13rem',
-    marginBottom: 40,
+    marginBottom: 50,
     '& > span': {
       fontFamily: 'Montserrat !important',
       fontWeight: '500',
@@ -34,7 +34,7 @@ export default makeStyles(() => ({
     position: 'absolute',
     width: 7,
     top: '25%',
-    left: '30%'
+    left: '20%'
   },
   estrellablanca2: {
     position: 'absolute',
@@ -98,13 +98,14 @@ export default makeStyles(() => ({
   orbit2: {
     position: 'absolute',
     width: '30%',
-    bottom: 5,
+    bottom: 20,
     left: -10,
     objectFit: 'cover',
     transform: 'rotate(230deg)'
   },
   rocket: {
     width: 130,
+    marginTop: 30,
     marginBottom: 40,
     zIndex: 2
   },
@@ -126,7 +127,7 @@ export default makeStyles(() => ({
     fontFamily: 'Montserrat !important',
     fontWeight: 500,
     paddingBottom: 0,
-    paddingTop: 80,
+    paddingTop: 90,
     padding: '0 5%'
   }
 }))

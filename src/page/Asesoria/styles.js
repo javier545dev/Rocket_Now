@@ -96,8 +96,8 @@ export default makeStyles(() => ({
   orbit2: {
     position: 'absolute',
     width: '35%',
-    top: 700,
-    left: -10,
+    bottom: 0,
+    left: -20,
     objectFit: 'cover',
     transform: 'rotate(230deg)'
   },
