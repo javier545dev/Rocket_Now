@@ -209,7 +209,7 @@ export default function Signup() {
           <Icon className={classes.icon} fontSize="small">
             <Facebook
               style={{
-                width: 25,
+                width: 22,
                 height: 24,
                 color: 'white',
                 marginRight: '15px'

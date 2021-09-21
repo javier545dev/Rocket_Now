@@ -58,8 +58,8 @@ export default makeStyles((theme) => ({
     margin: '10px 0',
     '& > span': {
       justifyContent: 'space-between',
-      paddingLeft: 14,
-      paddingRight: 16,
+      paddingLeft: 30,
+      paddingRight: 45,
       fontFamily: 'Montserrat !important',
       fontWeight: '400',
       fontSize: 14,
