@@ -2,7 +2,9 @@ import { Box, Button, IconButton, Typography } from '@material-ui/core'
 import { Facebook, Instagram, Twitter } from '@material-ui/icons/'
 import Orbit2 from '@Assets/images/orbit@2x.png'
 import Astronaut from '@Assets/images/astronaut.png'
-
+import Orbitheader from '@Assets/images/Orbitheader.png'
+import Estrellablanca from '@Assets/images/estrellablanca.png'
+import Estrellanaranja from '@Assets/images/estrellanaranja.png'
 import useStyles from './styles'
 
 const MenuProfile = () => {
@@ -11,8 +13,28 @@ const MenuProfile = () => {
   return (
     <Box height="100%" className={classes.root}>
       <img src={Orbit2} alt="Orbit" className={classes.orbit} />
-      <img src={Orbit2} alt="Orbit" className={classes.orbit2} />
+      <img src={Orbitheader} alt="Orbit" className={classes.orbit2} />
       <img src={Astronaut} alt="Astronaut" className={classes.astronaut} />
+      <img
+        src={Estrellablanca}
+        alt="Estrellablanca"
+        className={classes.estrellablanca}
+      />
+      <img
+        src={Estrellablanca}
+        alt="Estrellablanca"
+        className={classes.estrellablanca1}
+      />
+      <img
+        src={Estrellablanca}
+        alt="Estrellablanca"
+        className={classes.estrellablanca3}
+      />
+      <img
+        src={Estrellanaranja}
+        alt="Estrellanaranja"
+        className={classes.estrellanaranja}
+      />
       <Button
         type="button"
         variant="outlined"

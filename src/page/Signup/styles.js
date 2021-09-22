@@ -10,7 +10,7 @@ export default makeStyles((theme) => ({
     padding: '0 30px',
     height: 'calc(100vh - 80px)',
     width: '100%',
-    borderRadius: '180px 0 0 0'
+    borderRadius: '130px 0 0 0'
   },
   notchedOutline: {
     padding: '14.5px 12px',

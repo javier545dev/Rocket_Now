@@ -2,6 +2,9 @@ import { Box, Button, Typography, TextField } from '@material-ui/core'
 import { MoreVert } from '@material-ui/icons/'
 import Orbit2 from '@Assets/images/orbit@2x.png'
 import Astronaut from '@Assets/images/astronaut.png'
+import Estrellablanca from '@Assets/images/estrellablanca.png'
+import Estrellanaranja from '@Assets/images/estrellanaranja.png'
+import Orbitheader from '@Assets/images/Orbitheader.png'
 
 import useStyles from './styles'
 
@@ -11,8 +14,28 @@ const MenuTierra = () => {
   return (
     <Box height="100%" className={classes.root}>
       <img src={Orbit2} alt="Orbit" className={classes.orbit} />
-      <img src={Orbit2} alt="Orbit" className={classes.orbit2} />
+      <img src={Orbitheader} alt="Orbit" className={classes.orbit2} />
       <img src={Astronaut} alt="Astronaut" className={classes.astronaut} />
+      <img
+        src={Estrellablanca}
+        alt="Estrellablanca"
+        className={classes.estrellablanca}
+      />
+      <img
+        src={Estrellablanca}
+        alt="Estrellablanca"
+        className={classes.estrellablanca1}
+      />
+      <img
+        src={Estrellablanca}
+        alt="Estrellablanca"
+        className={classes.estrellablanca3}
+      />
+      <img
+        src={Estrellanaranja}
+        alt="Estrellanaranja"
+        className={classes.estrellanaranja}
+      />
       <TextField
         defaultValue="Manuel Hernandez"
         fullWidth

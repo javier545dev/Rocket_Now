@@ -43,7 +43,7 @@ export default makeStyles(() => ({
   estrellablanca2: {
     position: 'absolute',
     width: 15,
-    bottom: '13%',
+    bottom: '30%',
     left: '5%'
   },
   estrellablanca3: {
@@ -61,7 +61,7 @@ export default makeStyles(() => ({
   estrellaroja: {
     position: 'absolute',
     width: 10,
-    bottom: '10%',
+    bottom: '15%',
     right: '10%'
   },
   glowblue: {
@@ -69,6 +69,14 @@ export default makeStyles(() => ({
     width: 45,
     bottom: '70%',
     right: '75%'
+  },
+  orbit2: {
+    position: 'absolute',
+    width: '30%',
+    top: '75%',
+    left: '-4%',
+    objectFit: 'cover',
+    transform: 'rotate(225deg)'
   },
   rocket: {
     position: 'absolute',

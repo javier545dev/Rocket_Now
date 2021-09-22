@@ -16,6 +16,36 @@ export default makeStyles(() => ({
     height: 20,
     width: 20
   },
+  estrellablanca: {
+    position: 'absolute',
+    width: 7,
+    top: '15%',
+    left: '74%'
+  },
+  estrellablanca1: {
+    position: 'absolute',
+    width: 12,
+    top: '45%',
+    right: '10%'
+  },
+  estrellablanca2: {
+    position: 'absolute',
+    width: 10,
+    top: '90%',
+    left: '6%'
+  },
+  estrellablanca3: {
+    position: 'absolute',
+    width: 12,
+    bottom: '7%',
+    right: '20%'
+  },
+  estrellanaranja: {
+    position: 'absolute',
+    width: 8,
+    bottom: '18%',
+    left: '3%'
+  },
   orbit: {
     position: 'absolute',
     width: '35%',
@@ -26,10 +56,9 @@ export default makeStyles(() => ({
   orbit2: {
     position: 'fixed',
     width: '30%',
-    bottom: -50,
+    bottom: 0,
     left: -20,
-    objectFit: 'cover',
-    transform: 'rotate(220deg)'
+    objectFit: 'cover'
   },
   logo: {
     display: 'flex',

@@ -9,7 +9,7 @@ export default makeStyles(() => ({
     backgroundColor: '#454857',
     height: '100%',
     width: '100%',
-    borderRadius: '180px 0 0 0'
+    borderRadius: '130px 0 0 0'
   },
   btn: {
     height: '50px',
@@ -23,12 +23,6 @@ export default makeStyles(() => ({
       padding: 15
     }
   },
-  estrellablanca: {
-    position: 'absolute',
-    width: 10,
-    top: '15%',
-    left: '93%'
-  },
   estrellablanca1: {
     position: 'absolute',
     width: 7,
@@ -38,19 +32,19 @@ export default makeStyles(() => ({
   estrellablanca2: {
     position: 'absolute',
     width: 10,
-    top: '90%',
+    top: '105%',
     left: '6%'
   },
   estrellablanca3: {
     position: 'absolute',
     width: 5,
-    top: '95%',
+    top: '110%',
     left: '90%'
   },
   estrellaroja: {
     position: 'absolute',
     width: 10,
-    bottom: '15%',
+    bottom: '0%',
     right: '10%'
   },
   form: {
@@ -64,7 +58,7 @@ export default makeStyles(() => ({
     marginBottom: 30
   },
   media: {
-    width: '100%',
+    width: '95%',
     margin: 'auto'
   },
   orbit: {

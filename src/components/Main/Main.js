@@ -6,6 +6,7 @@ import Estrellaroja from '@Assets/images/estrellaroja.png'
 import Rocket from '@Assets/images/rocket.png'
 import CurveBlue from '@Assets/images/curveblue.png'
 import GlowBlue from '@Assets/images/glowblue.png'
+import Orbit2 from '@Assets/images/orbit@2x.png'
 
 import { useGlobalData, useGlobalActions } from '@Hooks'
 
@@ -27,7 +28,7 @@ const Main = () => {
       <img src={Astronaut} alt="Astronaut" className={classes.astronaut} />
       <img src={Rocket} alt="Rocket" className={classes.rocket} />
       <img src={GlowBlue} alt="Rocket" className={classes.glowblue} />
-
+      <img src={Orbit2} alt="orbit" className={classes.orbit2} />
       <img src={CurveBlue} alt="Curve Picture" className={classes.curveblue} />
 
       <img

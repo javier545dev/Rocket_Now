@@ -74,7 +74,7 @@ const Login = () => {
       <form size="small" className={classes.form} method="post">
         <TextField
           id="email"
-          label="Correo Electronico"
+          label="CORREO ELECTRÓNICO"
           variant="outlined"
           color="primary"
           type="email"
@@ -92,7 +92,7 @@ const Login = () => {
         />
         <TextField
           id="password"
-          label="Contraseña"
+          label="CONTRASEÑA"
           variant="outlined"
           color="primary"
           type="password"
@@ -115,14 +115,14 @@ const Login = () => {
           className={classes.btn}
           onClick={handleSubmit}
         >
-          Inicia Sesión
+          INICIAR SESIÓN
         </Button>
         <Typography
           variant="body2"
           className={classes.subtitle}
           color="primary"
         >
-          Aun no eres miembro?{' '}
+          ¿Aun no eres miembro?{' '}
           <Link
             href="#"
             variant="body2"

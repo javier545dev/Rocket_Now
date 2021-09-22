@@ -9,7 +9,7 @@ export default makeStyles(() => ({
     backgroundColor: '#454857',
     height: '100%',
     width: '100%',
-    borderRadius: '180px 0 0 0'
+    borderRadius: '130px 0 0 0'
   },
   btn: {
     height: '3rem',
@@ -62,7 +62,7 @@ export default makeStyles(() => ({
     alignItems: 'center',
     position: 'relative',
     padding: '0 8%',
-    marginBottom: 30
+    margin: 24
   },
   input: {
     color: 'white',
@@ -98,13 +98,12 @@ export default makeStyles(() => ({
   orbit2: {
     position: 'absolute',
     width: '30%',
-    bottom: 20,
+    bottom: 0,
     left: -10,
-    objectFit: 'cover',
-    transform: 'rotate(230deg)'
+    objectFit: 'cover'
   },
   rocket: {
-    width: 130,
+    width: 150,
     marginTop: 30,
     marginBottom: 40,
     zIndex: 2

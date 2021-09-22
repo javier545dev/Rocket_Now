@@ -26,6 +26,36 @@ export default makeStyles(() => ({
       letterSpacing: '0.04rem'
     }
   },
+  estrellablanca: {
+    position: 'absolute',
+    width: 7,
+    top: '15%',
+    left: '74%'
+  },
+  estrellablanca1: {
+    position: 'absolute',
+    width: 12,
+    top: '45%',
+    right: '10%'
+  },
+  estrellablanca2: {
+    position: 'absolute',
+    width: 10,
+    top: '90%',
+    left: '6%'
+  },
+  estrellablanca3: {
+    position: 'absolute',
+    width: 12,
+    bottom: '7%',
+    right: '20%'
+  },
+  estrellanaranja: {
+    position: 'absolute',
+    width: 8,
+    bottom: '18%',
+    left: '3%'
+  },
   inputText: {
     paddingBlock: 5,
     marginBottom: 10
@@ -40,10 +70,9 @@ export default makeStyles(() => ({
   orbit2: {
     position: 'fixed',
     width: '30%',
-    bottom: -50,
+    bottom: 0,
     left: -20,
-    objectFit: 'cover',
-    transform: 'rotate(220deg)'
+    objectFit: 'cover'
   },
   title: {
     textTransform: 'uppercase',

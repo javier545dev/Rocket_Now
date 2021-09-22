@@ -98,12 +98,11 @@ export default function Saber() {
           multiline
           rows={8}
           name="help"
-          label="¿En que necesitas ayuda?"
+          label="¿En que necesitas ayuda? (Opcional)"
           variant="filled"
           autoComplete="off"
           fullWidth
           id="how"
-          helperText="Opcional"
           style={{ zIndex: 2 }}
           InputProps={{
             disableUnderline: true,
@@ -116,7 +115,7 @@ export default function Saber() {
           variant="contained"
           color="primary"
           className={classes.btn}
-          onClick={() => history.push('/Gracias')}
+          onClick={() => history.push('/gracias')}
         >
           CONTÁCTENME
         </Button>

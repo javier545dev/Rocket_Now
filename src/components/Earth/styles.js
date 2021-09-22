@@ -13,7 +13,7 @@ export default makeStyles(() => ({
   title: {
     textAlign: 'center',
     margin: '10px 0',
-    marginBottom: '5rem',
+    marginBottom: '2.5rem',
     fontFamily: 'Orbitron !important',
     fontWeight: 500
   },

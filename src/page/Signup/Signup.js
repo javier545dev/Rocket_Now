@@ -124,7 +124,7 @@ export default function Signup() {
           required
           fullWidth
           id="name"
-          label="Nombre"
+          label="NOMBRE"
           value={sign.name}
           InputProps={{
             classes: {
@@ -145,6 +145,7 @@ export default function Signup() {
           fullWidth
           id="email"
           type="email"
+          label="CORREO ELECTRÓNICO"
           value={sign.email}
           InputProps={{
             classes: {
@@ -154,7 +155,6 @@ export default function Signup() {
           onChange={(e) =>
             setSign((prev) => ({ ...prev, email: e.target.value }))
           }
-          label="Email"
           name="email"
           autoComplete="off"
           // helperText={signError.email}
@@ -166,7 +166,7 @@ export default function Signup() {
           required
           fullWidth
           name="password"
-          label="Contraseña"
+          label="CONTRASEÑA"
           type="password"
           id="password"
           value={sign.password}

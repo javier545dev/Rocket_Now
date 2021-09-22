@@ -2,6 +2,9 @@
 import { MenuItem, Box, IconButton, Typography } from '@material-ui/core'
 import { Facebook, Instagram, Twitter } from '@material-ui/icons/'
 import Orbit2 from '@Assets/images/orbit@2x.png'
+import Orbitheader from '@Assets/images/Orbitheader.png'
+import Estrellablanca from '@Assets/images/estrellablanca.png'
+import Estrellanaranja from '@Assets/images/estrellanaranja.png'
 import Tierra from '@Assets/images/menutierra@1x.png'
 
 import { useGlobalData } from '@Hooks'
@@ -34,7 +37,27 @@ const Menu = ({ onClose }) => {
   return (
     <Box height="100%">
       <img src={Orbit2} alt="Orbit" className={classes.orbit} />
-      <img src={Orbit2} alt="Orbit" className={classes.orbit2} />
+      <img src={Orbitheader} alt="Orbit" className={classes.orbit2} />
+      <img
+        src={Estrellablanca}
+        alt="Estrellablanca"
+        className={classes.estrellablanca}
+      />
+      <img
+        src={Estrellablanca}
+        alt="Estrellablanca"
+        className={classes.estrellablanca1}
+      />
+      <img
+        src={Estrellablanca}
+        alt="Estrellablanca"
+        className={classes.estrellablanca3}
+      />
+      <img
+        src={Estrellanaranja}
+        alt="Estrellanaranja"
+        className={classes.estrellanaranja}
+      />
       <Box className={classes.boxItem}>
         <MenuItem className={classes.menuItem} {...propsItem('moon')}>
           <Box className={classes.logo}>

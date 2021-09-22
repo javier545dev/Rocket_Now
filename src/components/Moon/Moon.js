@@ -30,11 +30,6 @@ const Moon = () => {
       <img src={GlowBlue} alt="Rocket" className={classes.glowblue} />
       <img
         src={Estrellablanca}
-        alt="Estrellablanca"
-        className={classes.estrellablanca}
-      />
-      <img
-        src={Estrellablanca}
         alt="Estrellablanca1"
         className={classes.estrellablanca1}
       />
@@ -43,11 +38,7 @@ const Moon = () => {
         alt="Estrellablanca2"
         className={classes.estrellablanca2}
       />
-      <img
-        src={Estrellablanca}
-        alt="Estrellablanca3"
-        className={classes.estrellablanca3}
-      />
+
       <img
         src={Estrellablanca}
         alt="Estrellablanca4"
@@ -57,11 +48,6 @@ const Moon = () => {
         src={Estrellaroja}
         alt="Estrellaroja"
         className={classes.estrellaroja}
-      />
-      <img
-        src={Estrellaroja}
-        alt="Estrellaroja"
-        className={classes.estrellablanca}
       />
       <img src={Rocket} alt="Rocket" className={classes.rocket} />
 

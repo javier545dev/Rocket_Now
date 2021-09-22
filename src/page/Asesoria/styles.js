@@ -8,11 +8,12 @@ export default makeStyles(() => ({
     backgroundColor: '#454857',
     height: '100%',
     width: '100%',
-    borderRadius: '180px 0 0 0'
+    borderRadius: '130px 0 0 0'
   },
   btn: {
     height: '3rem',
     width: '13rem',
+    margin: 30,
     '& > span': {
       fontFamily: 'Montserrat !important',
       fontWeight: '500',

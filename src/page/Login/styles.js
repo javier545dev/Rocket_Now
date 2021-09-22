@@ -10,7 +10,7 @@ export default makeStyles(() => ({
     padding: '0 30px',
     height: 'calc(100vh - 80px)',
     width: '100%',
-    borderRadius: '180px 0 0 0'
+    borderRadius: '130px 0 0 0'
   },
   btn: {
     height: '50px',
@@ -50,7 +50,8 @@ export default makeStyles(() => ({
     position: 'absolute',
     width: 10,
     bottom: '15%',
-    right: '10%'
+    right: '10%',
+    zIndex: 1
   },
   form: {
     width: '100%',
@@ -87,7 +88,8 @@ export default makeStyles(() => ({
     textAlign: 'center',
     margin: '10px 0',
     fontFamily: 'Montserrat !important',
-    fontWeight: 500
+    fontWeight: 500,
+    zIndex: 2
   },
   title: {
     marginTop: '30px',

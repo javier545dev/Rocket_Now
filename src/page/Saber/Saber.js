@@ -13,12 +13,6 @@ export default function Saber() {
     <Box className={classes.root}>
       <img src={Orbit2} alt="orbit" className={classes.orbit} />
       <img src={Orbit2} alt="orbit" className={classes.orbit2} />
-
-      <img
-        src={Estrellablanca}
-        alt="Estrellablanca"
-        className={classes.estrellablanca}
-      />
       <img
         src={Estrellablanca}
         alt="Estrellablanca"
@@ -81,7 +75,7 @@ export default function Saber() {
           variant="contained"
           color="primary"
           className={classes.btn}
-          onClick={() => history.push('/Asesoria')}
+          onClick={() => history.push('/signup')}
         >
           NECESITO MAS
         </Button>
