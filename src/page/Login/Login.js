@@ -19,7 +19,6 @@ const Login = () => {
   })
 
   const handleSubmit = async (event) => {
-    console.log(globalAction)
     event.preventDefault()
     try {
       const { data: payload } = await login(data)
@@ -34,7 +33,7 @@ const Login = () => {
         email: data.email,
         password: ''
       })
-      alert('Correo o contraseña incorrectas')
+      alert('Correo o contraseña incorrecta')
     }
   }
 
@@ -81,6 +80,7 @@ const Login = () => {
           autoComplete="off"
           className={classes.input}
           value={data.email}
+          required
           InputProps={{
             classes: {
               notchedOutline: classes.notchedOutline
@@ -97,6 +97,7 @@ const Login = () => {
           color="primary"
           type="password"
           autoComplete="off"
+          required
           className={classes.input}
           value={data.password}
           InputProps={{
@@ -113,6 +114,7 @@ const Login = () => {
           variant="contained"
           fullWidth
           className={classes.btn}
+          disabled={data.email === '' || data.password === ''}
           onClick={handleSubmit}
         >
           INICIAR SESIÓN

@@ -27,7 +27,7 @@ function App() {
       const { data } = await profile()
       reAuth(data)
     } catch (error) {
-      console.log('aqui error', error)
+      console.warn(error?.message)
     } finally {
       setLoader(false)
     }

@@ -105,10 +105,7 @@ export default function Saber() {
           id="how"
           style={{ zIndex: 2 }}
           InputProps={{
-            disableUnderline: true,
-            classes: {
-              notchedOutline: classes.notchedOutline
-            }
+            disableUnderline: true
           }}
         />
         <Button

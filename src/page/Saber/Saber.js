@@ -41,12 +41,16 @@ export default function Saber() {
         PROCESO
       </Typography>
       <CardMedia
-        height="240"
-        className={classes.media}
-        allow="autoPlay"
+        width="560"
+        height="315"
         component="iframe"
-        image="https://www.youtube.com/embed/eMGG4mo_he4"
+        autoPlay
+        src="https://www.youtube.com/embed/6Nb-prB-4P0"
+        title="YouTube video player"
+        frameBorder="0"
+        allowFullScreen
       />
+
       <Box className={classes.form}>
         <Typography
           variant="subtitle2"

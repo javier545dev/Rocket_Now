@@ -136,10 +136,7 @@ export default function Launch({ sign }) {
             style={{ zIndex: 2 }}
             value={launch.why}
             InputProps={{
-              disableUnderline: true,
-              classes: {
-                notchedOutline: classes.notchedOutline
-              }
+              disableUnderline: true
             }}
             onChange={(e) =>
               setLaunch((prev) => ({ ...prev, why: e.target.value }))
@@ -194,10 +191,7 @@ export default function Launch({ sign }) {
             style={{ zIndex: 2 }}
             value={launch.what}
             InputProps={{
-              disableUnderline: true,
-              classes: {
-                notchedOutline: classes.notchedOutline
-              }
+              disableUnderline: true
             }}
             onChange={(e) =>
               setLaunch((prev) => ({ ...prev, what: e.target.value }))
@@ -252,10 +246,7 @@ export default function Launch({ sign }) {
             style={{ zIndex: 2 }}
             value={launch.how}
             InputProps={{
-              disableUnderline: true,
-              classes: {
-                notchedOutline: classes.notchedOutline
-              }
+              disableUnderline: true
             }}
             onChange={(e) =>
               setLaunch((prev) => ({ ...prev, how: e.target.value }))

@@ -125,7 +125,7 @@ export default function Signup() {
           fullWidth
           id="name"
           label="NOMBRE"
-          value={sign.name}
+          value={sign.name || ''}
           InputProps={{
             classes: {
               notchedOutline: classes.notchedOutline
@@ -146,7 +146,7 @@ export default function Signup() {
           id="email"
           type="email"
           label="CORREO ELECTRÓNICO"
-          value={sign.email}
+          value={sign.email || ''}
           InputProps={{
             classes: {
               notchedOutline: classes.notchedOutline
@@ -169,7 +169,7 @@ export default function Signup() {
           label="CONTRASEÑA"
           type="password"
           id="password"
-          value={sign.password}
+          value={sign.password || ''}
           InputProps={{
             classes: {
               notchedOutline: classes.notchedOutline
@@ -187,7 +187,11 @@ export default function Signup() {
           variant="contained"
           color="primary"
           className={classes.btn}
-          disabled={signError.name || signError.email || signError.password}
+          disabled={
+            signError.name !== '' ||
+            signError.email !== '' ||
+            signError.password !== ''
+          }
         >
           REGISTRO
         </Button>

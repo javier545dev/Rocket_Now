@@ -67,9 +67,6 @@ export default {
       '&:hover': {
         background: 'white'
       }
-    },
-    colorSecundary: {
-      background: 'white'
     }
   },
   MuiFormLabel: {
