@@ -132,6 +132,7 @@ export default makeStyles(() => ({
     paddingBottom: 25,
     paddingTop: 0,
     padding: '0 5%',
-    marginLeft: 35
+    marginLeft: 35,
+    textAlign: 'center'
   }
 }))
